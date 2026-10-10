@@ -35,3 +35,59 @@ notfound_alt_lang = "en"
 notfound_alt_title = "Page not found"
 notfound_alt_text = "The requested page does not exist or has been moved."
 notfound_alt_home = "Go to the English home page"
+
+# --- Breadcrumbs, dates -------------------------------------------------------
+breadcrumb_label = "Brotkrumennavigation"
+breadcrumb_home = "Startseite"
+
+# --- Expert profile -----------------------------------------------------------
+# Placeholders: .Name, .Role, .Fields, .ListNumber, .City, .Languages
+profile_intro_cert = "{{ .Name }} ist {{ .Role }} für {{ .Fields }}, eingetragen in der Gerichtssachverständigenliste unter der Nummer {{ .ListNumber }}."
+profile_intro_location = "{{ .Name }} ist in {{ .City }} tätig; Arbeitssprachen sind {{ .Languages }}."
+profile_services = "Leistungen"
+profile_court_certification = "Gerichtliche Zertifizierung"
+profile_cert_fields = "Fachgebiete laut Gerichtssachverständigenliste"
+profile_cert_list_number = "Listennummer"
+profile_cert_link = "Eintrag in der Gerichtssachverständigenliste (JustizOnline)"
+profile_other_certifications = "Weitere Zertifizierungen"
+profile_contact = "Kontakt"
+profile_own_email = "Eigene E-Mail-Adresse"
+profile_phone = "Telefon"
+profile_website = "Website"
+profile_portrait_alt = "Porträt von {{ .Name }}"
+list_and = "und"
+lang_de = "Deutsch"
+lang_en = "Englisch"
+
+# --- Contact ------------------------------------------------------------------
+# Subject lines of prefilled mailto links. Placeholders: .Name, .Service
+contact_subject_expert = "Anfrage an {{ .Name }}"
+contact_subject_expert_service = "Anfrage an {{ .Name }}: {{ .Service }}"
+contact_subject_service = "Anfrage: {{ .Service }}"
+contact_expert = "{{ .Name }} kontaktieren"
+contact_jump = "Kontaktadresse und Hinweis zur Weiterleitung"
+
+# --- Experts list, cards ------------------------------------------------------
+experts_profile_link = "Profil von {{ .Name }}"
+card_court_fields = "Gerichtlich zertifiziert für"
+card_services = "Leistungen"
+
+# --- Services -----------------------------------------------------------------
+service_audiences = "Wer beauftragt diese Leistung typischerweise?"
+service_result = "Ergebnis"
+service_experts = "Sachverständige für diese Leistung"
+service_experts_intro = "Die folgenden Sachverständigen des Netzwerks bieten diese Leistung an. Die Reihenfolge ist alphabetisch nach Nachnamen."
+service_domain = "Fachgebiet"
+services_offered_by = "Angeboten von"
+services_finder_intro = "Leistungen nach Fachgebiet. Jede Leistung führt zu den Sachverständigen, die sie anbieten."
+
+# --- Taxonomy terms (domains, audiences) --------------------------------------
+term_experts = "Sachverständige"
+term_services = "Leistungen"
+
+# --- Home ---------------------------------------------------------------------
+home_finder_heading = "Passende Sachverständige finden"
+home_finder_text = "Wählen Sie eine Leistung, um die Sachverständigen zu sehen, die sie anbieten."
+home_finder_link = "Zu den Leistungen"
+home_experts_heading = "Die Sachverständigen des Netzwerks"
+home_disclaimer_heading = "Hinweis"

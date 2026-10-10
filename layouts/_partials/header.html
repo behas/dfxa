@@ -11,7 +11,7 @@
         {{- range site.Menus.main }}
         <li><a href="{{ .URL }}"{{ if $current.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ T .Identifier }}</a></li>
         {{- end }}
-        <li>{{ partial "mailto.html" (dict "text" (T "nav_contact")) }}</li>
+        <li><a href="#contact" title="{{ T "contact_jump" }}">{{ T "nav_contact" }}</a></li>
       </ul>
     </nav>
     {{- partial "language-switch.html" . }}

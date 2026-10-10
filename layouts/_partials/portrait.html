@@ -1,0 +1,12 @@
+{{- /* Responsive WebP portrait of an expert, if the bundle contains an image
+       named portrait.*. Params: page, sizes (CSS sizes attribute), width. */ -}}
+{{- $p := .page }}
+{{- with $p.Resources.GetMatch "portrait.*" }}
+{{- $w := $.width | default 320 }}
+{{- $small := .Fill (printf "%dx%d webp q80 Center" $w $w) }}
+{{- $large := .Fill (printf "%dx%d webp q80 Center" (mul $w 2) (mul $w 2)) }}
+<img class="portrait" src="{{ $small.RelPermalink }}"
+     srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $large.RelPermalink }} {{ $large.Width }}w"
+     sizes="{{ $.sizes | default (printf "%dpx" $w) }}" width="{{ $small.Width }}" height="{{ $small.Height }}"
+     alt="{{ T "profile_portrait_alt" (dict "Name" (partial "expert-name.html" $p)) }}" loading="lazy" decoding="async">
+{{- end }}

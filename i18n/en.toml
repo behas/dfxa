@@ -35,3 +35,59 @@ notfound_alt_lang = "de"
 notfound_alt_title = "Seite nicht gefunden"
 notfound_alt_text = "Die angeforderte Seite existiert nicht oder wurde verschoben."
 notfound_alt_home = "Zur deutschen Startseite"
+
+# --- Breadcrumbs, dates -------------------------------------------------------
+breadcrumb_label = "Breadcrumb"
+breadcrumb_home = "Home"
+
+# --- Expert profile -----------------------------------------------------------
+# Placeholders: .Name, .Role, .Fields, .ListNumber, .City, .Languages
+profile_intro_cert = "{{ .Name }} is a {{ .Role }} for {{ .Fields }}, registered in the Austrian list of court experts under number {{ .ListNumber }}."
+profile_intro_location = "{{ .Name }} is based in {{ .City }} and works in {{ .Languages }}."
+profile_services = "Services"
+profile_court_certification = "Court certification"
+profile_cert_fields = "Fields according to the list of court experts"
+profile_cert_list_number = "List number"
+profile_cert_link = "Entry in the Austrian list of court experts (JustizOnline)"
+profile_other_certifications = "Other certifications"
+profile_contact = "Contact"
+profile_own_email = "Own email address"
+profile_phone = "Phone"
+profile_website = "Website"
+profile_portrait_alt = "Portrait of {{ .Name }}"
+list_and = "and"
+lang_de = "German"
+lang_en = "English"
+
+# --- Contact ------------------------------------------------------------------
+# Subject lines of prefilled mailto links. Placeholders: .Name, .Service
+contact_subject_expert = "Enquiry to {{ .Name }}"
+contact_subject_expert_service = "Enquiry to {{ .Name }}: {{ .Service }}"
+contact_subject_service = "Enquiry: {{ .Service }}"
+contact_expert = "Contact {{ .Name }}"
+contact_jump = "Contact address and note on forwarding"
+
+# --- Experts list, cards ------------------------------------------------------
+experts_profile_link = "Profile of {{ .Name }}"
+card_court_fields = "Court-certified for"
+card_services = "Services"
+
+# --- Services -----------------------------------------------------------------
+service_audiences = "Who typically commissions this service?"
+service_result = "Result"
+service_experts = "Experts offering this service"
+service_experts_intro = "The following experts in the network offer this service. They are listed alphabetically by surname."
+service_domain = "Domain"
+services_offered_by = "Offered by"
+services_finder_intro = "Services by domain. Each service leads to the experts who offer it."
+
+# --- Taxonomy terms (domains, audiences) --------------------------------------
+term_experts = "Experts"
+term_services = "Services"
+
+# --- Home ---------------------------------------------------------------------
+home_finder_heading = "Find the relevant expert"
+home_finder_text = "Choose a service to see the experts who offer it."
+home_finder_link = "Go to the services"
+home_experts_heading = "The experts in the network"
+home_disclaimer_heading = "Note"

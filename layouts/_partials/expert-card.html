@@ -1,0 +1,26 @@
+{{- /* Expert card. Params: page (expert), service (term page, optional).
+       With a service: shows the court fields and a contact button whose
+       subject names expert and service. */ -}}
+{{- $p := .page }}
+{{- $name := partial "expert-name.html" $p }}
+<article class="card expert-card">
+  {{- partial "portrait.html" (dict "page" $p "width" 160) }}
+  <div class="card__body">
+    <h3 class="card__title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+    {{- if .service }}
+    {{- with partial "court-fields.html" $p }}
+    <p class="card__meta">{{ T "card_court_fields" }}: {{ delimit . ", " }}</p>
+    {{- end }}
+    <p class="card__action">{{ partial "mailto.html" (dict
+      "subject" (T "contact_subject_expert_service" (dict "Name" $name "Service" .service.LinkTitle))
+      "text" (T "contact_expert" (dict "Name" $name))
+      "class" "button") }}</p>
+    {{- else }}
+    {{- with $p.Params.services }}
+    <p class="card__meta">{{ T "card_services" }}:
+      {{ $titles := slice }}{{ range . }}{{ $titles = $titles | append (partial "term-title.html" (dict "taxonomy" "services" "key" .)) }}{{ end }}
+      {{- delimit (sort $titles) ", " }}</p>
+    {{- end }}
+    {{- end }}
+  </div>
+</article>

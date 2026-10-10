@@ -1,0 +1,6 @@
+{{- /* Court-certified fields of an expert as "IT-Forensik (68.62)". Returns a slice. */ -}}
+{{- $out := slice }}
+{{- with .Params.court_certification }}{{ range .fields }}
+{{- $out = $out | append (cond (ne (.number | default "") "") (printf "%s (%s)" .name .number) .name) }}
+{{- end }}{{ end }}
+{{- return $out -}}

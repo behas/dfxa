@@ -52,15 +52,19 @@ without history.
 ### Edit or add an expert
 
 Each expert is a page bundle in `content/experts/<slug>/` with
-`index.de.md`, `index.en.md` and a portrait image. The front matter schema
+`index.de.md`, `index.en.md` and a portrait image (`portrait.jpg`). Create a
+new one with `hugo new content experts/<slug>`. The front matter schema
 (court certification, services, audiences, domains, optional contact data) is
 documented in `docs/adding-an-expert.md`. Each expert edits only their own
 bundle; `CODEOWNERS` assigns it to them.
 
 ### Add a service
 
-1. Create `content/services/<slug>/_index.de.md` and `_index.en.md` with
-   `title`, `description` and `domains`.
+1. Create `content/services/<key>/_index.de.md` and `_index.en.md` with
+   `title`, `description` (≤ 155 characters), `weight`, `domain` (one key of
+   `content/domains/`), `typical_audiences` and `result`, and a body that
+   starts with a plain-language definition followed by typical questions.
+   The German file also sets `slug` (German URL slug).
 2. Add `<slug>` to the `services` list in the front matter of every expert
    who offers it. The service finder is generated from the expert profiles;
    it is not maintained by hand.
@@ -74,7 +78,8 @@ bundle; `CODEOWNERS` assigns it to them.
 - No references to cases or clients, testimonials, client logos, statistics
   or case counts unless the expert provides them explicitly.
 - Every page needs a `description` (≤ 155 characters) in both languages.
-- Items that need confirmation are marked `TODO: verify` in the content files.
+- Items that need confirmation are marked `TODO: verify` in the content files;
+  `scripts/list-todos.sh` lists them.
 
 ## Review rule for shared pages
 

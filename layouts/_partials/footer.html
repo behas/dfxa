@@ -2,7 +2,7 @@
   <div class="container">
     <p class="site-footer__name"><strong>{{ T "site_name" }}</strong> – {{ T "site_suffix" }} ({{ T "site_short" }})</p>
     <p class="disclaimer">{{ T "disclaimer" }}</p>
-    {{- partial "contact.html" (dict "heading" true) }}
+    {{- partial "contact.html" (dict "heading" true "id" "contact") }}
     <nav aria-label="{{ T "nav_footer_label" }}">
       <ul class="site-footer__links">
         {{- range site.Menus.footer }}
