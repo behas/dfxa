@@ -13,7 +13,12 @@ TODO: replace `<org>` once the organisation name has been decided.
       (Organisation → Settings → Member privileges / People → Role: Owner).
 - [ ] Require two-factor authentication for all members
       (Organisation → Settings → Authentication security).
-- [ ] Create the repository `<org>/dfxa.at` and push this repository to it.
+- [ ] Transfer the repository from its current location `behas/dfxa` to the
+      organisation (Repository → Settings → General → Danger Zone → Transfer
+      ownership) and rename it to `dfxa.at`. GitHub redirects the old URLs.
+      Do this before GitHub Pages and the custom domain are configured
+      (milestone 6), so that the domain is verified for the organisation and
+      not for a personal account.
 
 ## 2. GitHub Pages
 
