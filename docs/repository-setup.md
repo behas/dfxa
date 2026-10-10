@@ -1,0 +1,63 @@
+# Repository setup and branch protection
+
+These settings are made in the GitHub web interface by an organisation owner.
+They are not stored in the repository.
+
+The organisation name is referred to as `<org>` below.
+TODO: replace `<org>` once the organisation name has been decided.
+
+## 1. Organisation and repository
+
+- [ ] Create the GitHub organisation `<org>` (not a personal account).
+- [ ] Make both experts organisation **owners**
+      (Organisation → Settings → Member privileges / People → Role: Owner).
+- [ ] Require two-factor authentication for all members
+      (Organisation → Settings → Authentication security).
+- [ ] Create the repository `<org>/dfxa.at` and push this repository to it.
+
+## 2. GitHub Pages
+
+- [ ] Repository → Settings → Pages → Build and deployment → Source:
+      **GitHub Actions**.
+- [ ] After the DNS records in `docs/dns.md` are in place: Settings → Pages →
+      Custom domain: `dfxa.at`, then tick **Enforce HTTPS** once the
+      certificate has been issued.
+- [ ] Verify the domain for the organisation to prevent domain takeover:
+      Organisation → Settings → Pages → Add a domain → `dfxa.at`
+      (requires the TXT record from `docs/dns.md`).
+- [ ] Settings → Environments → `github-pages` → Deployment branches and tags:
+      restrict to `main`.
+
+## 3. Branch protection for `main`
+
+Either a classic branch protection rule or a repository ruleset
+(Settings → Rules → Rulesets → New branch ruleset, target `main`) with:
+
+- [ ] **Require a pull request before merging**
+  - [ ] Required approvals: **1** (the other expert)
+  - [ ] Dismiss stale pull request approvals when new commits are pushed
+  - [ ] Require review from Code Owners
+- [ ] **Require status checks to pass** and require branches to be up to date:
+  - `build` (job of workflow "CI")
+  - `link check` (job of workflow "CI")
+  The checks appear in the selection list only after the CI workflow has run
+  at least once on a pull request.
+- [ ] **Block force pushes**
+- [ ] **Restrict deletions**
+- [ ] Do not allow bypassing the above settings (also for administrators),
+      so that changes to shared pages always need the other expert's approval.
+
+## 4. Code owners
+
+`.github/CODEOWNERS` assigns each expert's profile bundle
+(`content/experts/<slug>/`) to that expert and all shared pages, templates,
+i18n strings and workflows to all experts. Together with "Require review
+from Code Owners" this means:
+
+- a change to an expert's own profile needs that expert's review (or the
+  other expert's approval when the author is the profile owner);
+- a change to shared pages needs the approval of the other expert(s).
+
+With more than two experts, "approval of all experts" for shared pages cannot
+be expressed by GitHub's review count alone; in that case raise the required
+number of approvals to (number of experts − 1).

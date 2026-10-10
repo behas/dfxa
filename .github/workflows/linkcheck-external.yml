@@ -1,0 +1,33 @@
+# Weekly check of external links (JustizOnline, experts' websites, ...).
+# Non-blocking for pull requests; failures show up in the Actions tab.
+name: External link check
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HUGO_VERSION: 0.166.0
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Hugo (extended)
+        run: |
+          wget -nv -O "${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+      - run: hugo --gc
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --root-dir "${{ github.workspace }}/public"
+            "public/**/*.html"
+          fail: true

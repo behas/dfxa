@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $suffix := T "site_title_suffix" }}
+{{- $title := "" }}
+{{- if .Params.seo_title }}{{ $title = .Params.seo_title }}
+{{- else if eq .Kind "404" }}{{ $title = printf "%s – %s" (T "notfound_title") $suffix }}
+{{- else if .IsHome }}{{ $title = printf "%s – %s" (T "site_name") (T "site_suffix") }}
+{{- else }}{{ $title = printf "%s – %s" .Title $suffix }}{{ end }}
+<title>{{ $title }}</title>
+{{- $desc := .Description | default .Summary | plainify | htmlUnescape | strings.TrimSpace }}
+{{- if not .Description }}{{ if not (eq .Kind "404") }}{{ warnf "[seo] missing description: %s (%s)" .RelPermalink .Language.Lang }}{{ end }}{{ end }}
+{{- with $desc }}
+<meta name="description" content="{{ . | truncate 155 }}">
+{{- end }}
+{{- if eq .Kind "404" }}
+<meta name="robots" content="noindex">
+{{- else }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- partial "hreflang.html" . }}
+{{- end }}
+<meta name="color-scheme" content="light dark">
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

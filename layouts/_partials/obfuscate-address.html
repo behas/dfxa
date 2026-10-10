@@ -1,0 +1,5 @@
+{{- /* HTML-escapes a text and replaces the network address in it with its
+       entity-encoded form. Input: string. Returns template.HTML. */ -}}
+{{- $email := site.Params.contactEmail }}
+{{- $enc := partialCached "entities.html" $email $email }}
+{{- return (replace (. | htmlEscape) $email (string $enc) | safeHTML) -}}

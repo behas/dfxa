@@ -1,0 +1,10 @@
+{{- /* Renders a mailto link to site.Params.contactEmail (or .email). The href
+       and, if no .text is given, the visible address are HTML-entity-encoded.
+       Works without JavaScript: browsers decode the entities, simple
+       scrapers do not. Params: email, subject, text, class. */ -}}
+{{- $email := .email | default site.Params.contactEmail }}
+{{- $href := printf "mailto:%s" $email }}
+{{- with .subject }}{{ $href = printf "%s?subject=%s" $href (. | urlquery | replaceRE `\+` "%20") }}{{ end }}
+{{- $text := "" }}
+{{- with .text }}{{ $text = . | htmlEscape }}{{ else }}{{ $text = partialCached "entities.html" $email $email }}{{ end }}
+{{- printf `<a href="%s" class="%s">%s</a>` (partialCached "entities.html" $href $href) (.class | default "mailto" | htmlEscape) $text | safeHTML -}}

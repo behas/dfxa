@@ -1,0 +1,109 @@
+/* DFXA base stylesheet. System font stack only – no external fonts.
+   Design tokens are defined on :root and overridden for dark mode. */
+
+:root {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --color-bg: #ffffff;
+  --color-surface: #f4f5f7;
+  --color-text: #1b1f24;
+  --color-muted: #4a525c;
+  --color-border: #d4d8de;
+  --color-link: #1f4f8a;
+  --color-focus: #b45309;
+  --measure: 70ch;
+  --space: 1rem;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121417;
+    --color-surface: #1c2025;
+    --color-text: #e7e9ec;
+    --color-muted: #b3bac3;
+    --color-border: #39404a;
+    --color-link: #9cc3f5;
+    --color-focus: #fbbf24;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a { color: var(--color-link); text-underline-offset: 0.15em; }
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space);
+}
+
+main { display: block; padding-block: calc(var(--space) * 2); }
+main:focus { outline: none; }
+main p, main li { max-width: var(--measure); }
+
+.skip-link {
+  position: absolute;
+  left: var(--space);
+  top: -10rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg);
+  color: var(--color-link);
+  z-index: 10;
+}
+.skip-link:focus { top: var(--space); }
+
+.site-header { border-bottom: 1px solid var(--color-border); }
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space);
+  padding-block: var(--space);
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  text-decoration: none;
+  margin-inline-end: auto;
+}
+.brand__short { font-weight: 700; letter-spacing: 0.08em; }
+.brand__name { font-size: 1.125rem; }
+.brand__suffix { font-size: 0.875rem; color: var(--color-muted); }
+
+.site-nav ul, .lang-switch ul, .site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav a[aria-current="page"] { font-weight: 600; }
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding-block: calc(var(--space) * 2);
+  font-size: 0.9375rem;
+}
+.site-footer p { max-width: var(--measure); }
+.disclaimer { color: var(--color-muted); }
+.contact__heading { font-size: 1rem; margin-block-end: 0.25rem; }
+.contact__note { color: var(--color-muted); font-size: 0.875rem; }

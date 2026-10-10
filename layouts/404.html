@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{- $other := "" }}
+{{- range site.Home.Translations }}{{ $other = . }}{{ end }}
+<div class="container">
+  <h1>{{ T "notfound_title" }}</h1>
+  <p>{{ T "notfound_text" }}</p>
+  <p><a href="{{ site.Home.RelPermalink }}">{{ T "notfound_home" }}</a></p>
+  {{- with $other }}
+  <div lang="{{ T "notfound_alt_lang" }}">
+    <h2>{{ T "notfound_alt_title" }}</h2>
+    <p>{{ T "notfound_alt_text" }}</p>
+    <p><a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ T "notfound_alt_home" }}</a></p>
+  </div>
+  {{- end }}
+</div>
+{{ end }}

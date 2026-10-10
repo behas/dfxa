@@ -1,0 +1,37 @@
+# UI strings (German). Every key must also exist in en.toml – enforced by
+# scripts/check-language-parity.mjs in CI.
+
+site_name = "Digital Forensics Austria"
+site_short = "DFXA"
+site_suffix = "Network of Independent Experts"
+site_title_suffix = "DFXA Digital Forensics Austria"
+home_link_label = "Startseite: Digital Forensics Austria – Network of Independent Experts"
+
+skip_to_content = "Zum Inhalt springen"
+nav_main_label = "Hauptnavigation"
+nav_footer_label = "Rechtliches"
+nav_services = "Leistungen"
+nav_experts = "Sachverständige"
+nav_about = "Über das Netzwerk"
+nav_legal_notice = "Impressum"
+nav_privacy = "Datenschutz"
+nav_contact = "Kontakt"
+
+language_switch_label = "Sprache wählen"
+language_switch_current = "Aktuelle Sprache"
+
+disclaimer = "Digital Forensics Austria ist ein Zusammenschluss unabhängiger Sachverständiger. Aufträge werden ausschließlich von den einzelnen Sachverständigen im eigenen Namen übernommen. Eine gemeinsame Haftung besteht nicht."
+contact_note = "Anfragen an contact@dfxa.at erhalten die Sachverständigen des Netzwerks; beantwortet werden sie von der bzw. dem jeweils zuständigen Sachverständigen, die bzw. der Aufträge im eigenen Namen übernimmt."
+contact_heading = "Kontakt"
+
+last_updated = "Zuletzt aktualisiert"
+
+notfound_title = "Seite nicht gefunden"
+notfound_text = "Die angeforderte Seite existiert nicht oder wurde verschoben."
+notfound_home = "Zur Startseite"
+# The 404 page is served for both languages by GitHub Pages (/404.html),
+# so it also carries the text of the other language.
+notfound_alt_lang = "en"
+notfound_alt_title = "Page not found"
+notfound_alt_text = "The requested page does not exist or has been moved."
+notfound_alt_home = "Go to the English home page"

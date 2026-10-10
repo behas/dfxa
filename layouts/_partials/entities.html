@@ -1,0 +1,10 @@
+{{- /* Encodes printable ASCII characters as decimal HTML entities. Other
+       characters are passed through HTML-escaped. Called via partialCached. */ -}}
+{{- $chars := split (printf "%s%s%s" ` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` "`" "abcdefghijklmnopqrstuvwxyz{|}~") "" }}
+{{- $out := "" }}
+{{- range $c := split . "" }}
+{{- $enc := $c | htmlEscape }}
+{{- range $i, $k := $chars }}{{ if eq $k $c }}{{ $enc = printf "&#%d;" (add $i 32) }}{{ break }}{{ end }}{{ end }}
+{{- $out = printf "%s%s" $out $enc }}
+{{- end }}
+{{- $out | safeHTML -}}

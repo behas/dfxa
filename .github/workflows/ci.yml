@@ -1,0 +1,66 @@
+# Pull requests: build, language parity check and link check. No deployment.
+name: CI
+
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+env:
+  HUGO_VERSION: 0.166.0   # keep in sync with .hugo-version and hugo.toml
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0   # full history for enableGitInfo (last-updated dates)
+
+      - name: Language parity check
+        run: node scripts/check-language-parity.mjs
+
+      - name: Install Hugo (extended)
+        run: |
+          wget -nv -O "${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+          hugo version
+
+      - name: Build
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --gc --printPathWarnings
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public
+          path: public
+          retention-days: 3
+
+  linkcheck:
+    name: link check
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: public
+          path: public
+
+      # Internal links only (blocking). External links are checked by the
+      # scheduled workflow linkcheck-external.yml so that an unreachable
+      # third-party site does not block merges.
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline
+            --no-progress
+            --include-fragments
+            --root-dir "${{ github.workspace }}/public"
+            "public/**/*.html"
+          fail: true

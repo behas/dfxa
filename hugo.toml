@@ -1,0 +1,111 @@
+# DFXA – Digital Forensics Austria · Network of Independent Experts
+#
+# Hugo version: pinned to 0.166.0 (extended). Keep in sync with
+# .hugo-version and HUGO_VERSION in .github/workflows/*.yml.
+
+baseURL = "https://dfxa.at/"
+title = "DFXA – Digital Forensics Austria"
+
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+
+enableGitInfo = true
+enableRobotsTXT = true
+disableHugoGeneratorInject = true
+disableKinds = ["rss"]
+
+# Lowercase, stable URLs (see docs). Never change a published URL without
+# adding an `aliases` entry to the page's front matter.
+disablePathToLower = false
+
+[module.hugoVersion]
+  extended = true
+  min = "0.166.0"
+
+[taxonomies]
+  service = "services"
+  audience = "audiences"
+  domain = "domains"
+
+[params]
+  contactEmail = "contact@dfxa.at"
+  # Shown next to the short form in the header and in the legal notice.
+  suffix = "Network of Independent Experts"
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+# HTML output is not minified: the minifier decodes the HTML entities used to
+# obfuscate e-mail addresses (layouts/_partials/mailto.html). CSS and JS are
+# minified through Hugo Pipes.
+[minify]
+  minifyOutput = false
+
+[privacy]
+  [privacy.youtube]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.instagram]
+    disable = true
+
+# Navigation. Labels come from i18n (key = identifier); pageRef resolves to
+# the page in the current language, so no localised paths are hard-coded.
+[[menus.main]]
+  identifier = "nav_services"
+  pageRef = "/services"
+  weight = 10
+[[menus.main]]
+  identifier = "nav_experts"
+  pageRef = "/experts"
+  weight = 20
+[[menus.main]]
+  identifier = "nav_about"
+  pageRef = "/about"
+  weight = 30
+
+[[menus.footer]]
+  identifier = "nav_legal_notice"
+  pageRef = "/legal-notice"
+  weight = 10
+[[menus.footer]]
+  identifier = "nav_privacy"
+  pageRef = "/privacy"
+  weight = 20
+
+[languages]
+  [languages.de]
+    label = "Deutsch"
+    locale = "de"
+    weight = 1
+    [languages.de.permalinks.page]
+      experts = "/sachverstaendige/:slug/"
+    [languages.de.permalinks.section]
+      experts = "/sachverstaendige/"
+    [languages.de.permalinks.taxonomy]
+      services = "/leistungen/"
+      audiences = "/zielgruppen/"
+      domains = "/fachgebiete/"
+    [languages.de.permalinks.term]
+      services = "/leistungen/:slug/"
+      audiences = "/zielgruppen/:slug/"
+      domains = "/fachgebiete/:slug/"
+
+  [languages.en]
+    label = "English"
+    locale = "en"
+    weight = 2
+    [languages.en.permalinks.page]
+      experts = "/experts/:slug/"
+    [languages.en.permalinks.section]
+      experts = "/experts/"
+    [languages.en.permalinks.taxonomy]
+      services = "/services/"
+      audiences = "/audiences/"
+      domains = "/domains/"
+    [languages.en.permalinks.term]
+      services = "/services/:slug/"
+      audiences = "/audiences/:slug/"
+      domains = "/domains/:slug/"

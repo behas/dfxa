@@ -1,0 +1,15 @@
+{{- /* Links to the equivalent page in the other language(s), never to home
+       unless the page itself is the home page. */ -}}
+{{- if and .IsTranslated (ne .Kind "404") }}
+<nav class="lang-switch" aria-label="{{ T "language_switch_label" }}">
+  <ul>
+    {{- range .AllTranslations }}
+    {{- if eq .Language.Lang $.Language.Lang }}
+    <li><span aria-current="true" lang="{{ .Language.Lang }}" title="{{ T "language_switch_current" }}">{{ .Language.Lang | upper }}</span></li>
+    {{- else }}
+    <li><a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}">{{ .Language.Label }}</a></li>
+    {{- end }}
+    {{- end }}
+  </ul>
+</nav>
+{{- end }}
