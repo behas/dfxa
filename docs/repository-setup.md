@@ -54,14 +54,18 @@ Either a classic branch protection rule or a repository ruleset
 
 ## 4. Code owners
 
-`.github/CODEOWNERS` assigns each expert's profile bundle
-(`content/experts/<slug>/`) to that expert and all shared pages, templates,
-i18n strings and workflows to all experts. Together with "Require review
-from Code Owners" this means:
+`.github/CODEOWNERS` lists both experts for every path; on an expert's own
+profile bundle (`content/experts/<slug>/`) that expert is listed first.
+Together with "Require review from Code Owners" and one required approval:
 
-- a change to an expert's own profile needs that expert's review (or the
-  other expert's approval when the author is the profile owner);
-- a change to shared pages needs the approval of the other expert(s).
+- a change by the profile owner to their own profile needs the other
+  expert's approval (GitHub does not count the author's own review);
+- a change by anyone else to a profile needs the profile owner's approval;
+- a change to shared pages, templates, i18n strings or workflows needs the
+  approval of the expert who did not author it.
+
+Usernames: Bernhard Haslhofer `@behas`, Johann Stockinger `@uptuk`. Both must
+have write access to the repository, otherwise GitHub ignores their entries.
 
 With more than two experts, "approval of all experts" for shared pages cannot
 be expressed by GitHub's review count alone; in that case raise the required
