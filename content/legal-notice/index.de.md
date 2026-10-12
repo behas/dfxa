@@ -25,11 +25,11 @@ Digital Forensics Austria ist keine Gesellschaft und kein Unternehmen, sondern e
 
 Die genannten Personen sind in der Gerichtssachverständigenliste als allgemein beeidete und gerichtlich zertifizierte Sachverständige eingetragen. Die jeweiligen Fachgebiete und Listennummern sind auf den Profilseiten der Sachverständigen angegeben und mit dem Eintrag in der Gerichtssachverständigenliste (JustizOnline) verlinkt.
 
-Berufsrechtliche Vorschrift: Sachverständigen- und Dolmetschergesetz (SDG), abrufbar im Rechtsinformationssystem des Bundes (RIS). TODO: verify – Link auf die geltende Fassung im RIS ergänzen.
+Berufsrechtliche Vorschrift: Sachverständigen- und Dolmetschergesetz (SDG), abrufbar im [Rechtsinformationssystem des Bundes (RIS)](https://www.ris.bka.gv.at/).
 
-Listenführende Stelle: TODO: verify – Präsidentin bzw. Präsident des zuständigen Landesgerichts.
+Listenführende Stelle: Präsidentin bzw. Präsident des Landesgerichts für Zivilrechtssachen Wien.
 
-UID-Nummern: TODO: verify – falls vorhanden, je Sachverständiger bzw. Sachverständigem angeben.
+UID-Nummern: TODO: legal review – klären, ob anzugeben; falls ja, je Sachverständiger bzw. Sachverständigem.
 
 ## Grundlegende Richtung (§ 25 Abs. 4 MedienG)
 
@@ -37,7 +37,7 @@ Information über die Sachverständigen des Netzwerks Digital Forensics Austria 
 
 ## Verantwortung für Inhalte
 
-Jede bzw. jeder Sachverständige ist allein für die Inhalte des eigenen Profils verantwortlich. Für die übrigen Seiten sind die Medieninhaber gemeinsam verantwortlich. TODO: verify
+Jede bzw. jeder Sachverständige ist allein für die Inhalte des eigenen Profils verantwortlich. Für die übrigen Seiten sind die Medieninhaber gemeinsam verantwortlich. TODO: verify – Formulierung folgt (Bernhard Haslhofer).
 
 ## Haftungshinweis
 

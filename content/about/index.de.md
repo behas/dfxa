@@ -14,7 +14,7 @@ Die gemeinsame Kontaktadresse dient nur dazu, Anfragen an die Sachverständigen 
 
 ## Unabhängigkeit
 
-Die Sachverständigen des Netzwerks sind voneinander unabhängig. Die Zusammenarbeit im Netzwerk beschränkt sich auf den gemeinsamen Auftritt und die gemeinsame Kontaktadresse. Jede bzw. jeder Sachverständige prüft vor der Übernahme eines Auftrags selbst, ob Befangenheitsgründe oder Interessenkonflikte vorliegen. TODO: verify – Formulierung mit der Kooperationsvereinbarung abgleichen.
+Die Sachverständigen des Netzwerks sind voneinander unabhängig. Die Zusammenarbeit im Netzwerk beschränkt sich auf den gemeinsamen Auftritt und die gemeinsame Kontaktadresse. Jede bzw. jeder Sachverständige prüft vor der Übernahme eines Auftrags selbst, ob Befangenheitsgründe oder Interessenkonflikte vorliegen.
 
 ## Aufnahmekriterien
 
@@ -22,8 +22,6 @@ In das Netzwerk aufgenommen werden kann, wer
 
 - in der Gerichtssachverständigenliste als allgemein beeidete und gerichtlich zertifizierte Sachverständige bzw. allgemein beeideter und gerichtlich zertifizierter Sachverständiger in einem Fachgebiet der digitalen Forensik eingetragen ist und
 - die Zustimmung aller Sachverständigen des Netzwerks erhält.
-
-TODO: verify – weitere Kriterien gemäß Kooperationsvereinbarung.
 
 ## Kontakt
 

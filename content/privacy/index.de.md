@@ -14,11 +14,11 @@ Diese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Dienst
 
 ## Hosting
 
-Die Website wird über GitHub Pages bereitgestellt. Anbieter ist GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. TODO: verify – Anschrift und zuständige Vertragspartei prüfen.
+Die Website wird über GitHub Pages bereitgestellt. Anbieter ist GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. TODO: legal review – Anschrift und zuständige Vertragspartei prüfen.
 
 Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten in Server-Protokollen, insbesondere die IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite und Angaben zum verwendeten Browser. Die Verarbeitung dient der Bereitstellung und Sicherheit der Website. Rechtsgrundlage ist das berechtigte Interesse an einem sicheren und funktionsfähigen Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO).
 
-Dabei werden Daten in die USA übermittelt. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der Europäischen Kommission zum EU-US Data Privacy Framework, soweit GitHub, Inc. danach zertifiziert ist. TODO: verify – Zertifizierung von GitHub, Inc. in der Data-Privacy-Framework-Liste prüfen; andernfalls Standardvertragsklauseln angeben.
+Dabei werden Daten in die USA übermittelt. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der Europäischen Kommission zum EU-US Data Privacy Framework, soweit GitHub, Inc. danach zertifiziert ist. TODO: legal review – Zertifizierung von GitHub, Inc. in der Data-Privacy-Framework-Liste prüfen; andernfalls Standardvertragsklauseln angeben.
 
 ## E-Mail-Anfragen an die Kontaktadresse
 
@@ -51,7 +51,7 @@ Für E-Mails, die direkt an die eigene E-Mail-Adresse einer bzw. eines Sachverst
 
 ## Speicherdauer
 
-Daten aus Anfragen werden gelöscht, sobald sie für die Beantwortung und für allfällige gesetzliche Aufbewahrungspflichten nicht mehr erforderlich sind. TODO: verify – konkrete Fristen festlegen.
+Daten aus Anfragen werden gelöscht, sobald sie für die Beantwortung und für allfällige gesetzliche Aufbewahrungspflichten nicht mehr erforderlich sind.
 
 ## Rechte der betroffenen Personen
 

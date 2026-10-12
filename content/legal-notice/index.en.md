@@ -24,11 +24,11 @@ Digital Forensics Austria is not a partnership or company but a network of indep
 
 The persons named above are registered in the Austrian list of court experts as sworn and court-certified expert witnesses. Their fields and list numbers are stated on the experts' profile pages and linked to the respective entry in the list of court experts (JustizOnline).
 
-Professional regulation: Austrian Expert Witnesses and Interpreters Act (Sachverständigen- und Dolmetschergesetz, SDG), available in the Austrian legal information system (RIS). TODO: verify – add link to the current version in RIS.
+Professional regulation: Austrian Expert Witnesses and Interpreters Act (Sachverständigen- und Dolmetschergesetz, SDG), available in the [Austrian legal information system (RIS)](https://www.ris.bka.gv.at/).
 
-Authority keeping the list: TODO: verify – President of the competent Regional Court (Landesgericht).
+Authority keeping the list: President of the Regional Court for Civil Matters Vienna (Landesgericht für Zivilrechtssachen Wien).
 
-VAT identification numbers: TODO: verify – state per expert, if applicable.
+VAT identification numbers: TODO: legal review – clarify whether required; if so, state per expert.
 
 ## Basic orientation (§ 25(4) MedienG)
 
@@ -36,7 +36,7 @@ Information about the experts of the Digital Forensics Austria network and their
 
 ## Responsibility for content
 
-Each expert is solely responsible for the content of their own profile. The media owners are jointly responsible for the other pages. TODO: verify
+Each expert is solely responsible for the content of their own profile. The media owners are jointly responsible for the other pages. TODO: verify – wording to follow (Bernhard Haslhofer).
 
 ## Liability disclaimer
 

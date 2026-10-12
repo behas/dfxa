@@ -13,7 +13,7 @@ The shared contact address serves only to forward enquiries to the experts. An e
 
 ## Independence
 
-The experts in the network are independent of one another. Their cooperation within the network is limited to the shared website and the shared contact address. Before accepting an engagement, each expert checks independently whether there are grounds for bias or conflicts of interest. TODO: verify – align wording with the cooperation agreement.
+The experts in the network are independent of one another. Their cooperation within the network is limited to the shared website and the shared contact address. Before accepting an engagement, each expert checks independently whether there are grounds for bias or conflicts of interest.
 
 ## Admission criteria
 
@@ -21,8 +21,6 @@ An expert can be admitted to the network if they
 
 - are registered in the Austrian list of court experts as a sworn and court-certified expert witness in a field of digital forensics, and
 - obtain the consent of all experts in the network.
-
-TODO: verify – further criteria according to the cooperation agreement.
 
 ## Contact
 

@@ -13,11 +13,11 @@ This website does not set cookies, does not use analytics or tracking services, 
 
 ## Hosting
 
-The website is served via GitHub Pages. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. TODO: verify – check address and contracting entity.
+The website is served via GitHub Pages. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. TODO: legal review – check address and contracting entity.
 
 When the website is accessed, GitHub processes technically necessary data in server logs, in particular the IP address, date and time of access, the page requested and information about the browser used. The processing serves to provide the website and keep it secure. The legal basis is the legitimate interest in the secure and reliable operation of the website (Art. 6(1)(f) GDPR).
 
-This involves a transfer of data to the USA. The transfer is based on the European Commission's adequacy decision for the EU-US Data Privacy Framework, to the extent that GitHub, Inc. is certified under it. TODO: verify – check GitHub, Inc.'s certification in the Data Privacy Framework list; otherwise state standard contractual clauses.
+This involves a transfer of data to the USA. The transfer is based on the European Commission's adequacy decision for the EU-US Data Privacy Framework, to the extent that GitHub, Inc. is certified under it. TODO: legal review – check GitHub, Inc.'s certification in the Data Privacy Framework list; otherwise state standard contractual clauses.
 
 ## Enquiries by email to the contact address
 
@@ -50,7 +50,7 @@ For emails sent directly to an expert's own email address, that expert is the so
 
 ## Retention
 
-Data from enquiries are deleted once they are no longer needed for answering the enquiry or for any statutory retention obligations. TODO: verify – define specific periods.
+Data from enquiries are deleted once they are no longer needed for answering the enquiry or for any statutory retention obligations.
 
 ## Data subject rights
 
