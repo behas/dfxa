@@ -10,13 +10,15 @@ role: "sworn and court-certified expert witness"
 court_certification:
   list_number: "W383379"
   url: "https://justizonline.gv.at/jop/web/exl/W383379"
-  fields:                        # TODO: verify exact field names and numbers against the court expert list
+  group: "68 Information technology"
+  official_group: "68 Informationstechnik"
+  fields:                        # TODO: verify 68.60 wording, restrictions and certified_until against JustizOnline
     - number: "68.60"
-      name: "IT security"
-      official_name: "IT-Sicherheit"
+      name: "IT security (TODO: verify official name)"
+      official_name: ""
     - number: "68.62"
-      name: "IT forensics"
-      official_name: "IT-Forensik"
+      name: "Forensic data preservation, data reconstruction, data analysis"
+      official_name: "Forensische Datensicherung, Datenrekonstruktion, Datenauswertung"
 other_certifications:
   - name: "GIAC Certified Forensic Analyst (GCFA)"
     issuer: "GIAC"

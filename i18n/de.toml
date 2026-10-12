@@ -91,3 +91,11 @@ home_finder_text = "Wählen Sie eine Leistung, um die Sachverständigen zu sehen
 home_finder_link = "Zu den Leistungen"
 home_experts_heading = "Die Sachverständigen des Netzwerks"
 home_disclaimer_heading = "Hinweis"
+
+# --- Court certification fields -------------------------------------------------
+# Placeholders: .Name, .Number, .Restriction, .Date
+court_field_inline = "„{{ .Name }}“ ({{ .Number }})"
+court_field_inline_restricted = "„{{ .Name }}“ ({{ .Number }}, nur für {{ .Restriction }})"
+court_field_restriction = "nur für {{ .Restriction }}"
+court_field_certified_until = "zertifiziert bis {{ .Date }}"
+profile_cert_group = "Fachgruppe"

@@ -10,11 +10,18 @@ role: "allgemein beeideter und gerichtlich zertifizierter Sachverständiger"
 court_certification:
   list_number: "W333553"
   url: "https://justizonline.gv.at/jop/web/exl/W333553"
-  fields:                        # TODO: verify exact field names and numbers against the court expert list
-    - number: ""
-      name: "IT-Forensik (TODO: verify Bezeichnung und Nummer)"
-    - number: ""
-      name: "Kryptoforensik (TODO: verify Bezeichnung und Nummer)"
+  group: "68 Informationstechnik"
+  fields:                        # wording as in the court expert list (JustizOnline)
+    - number: "68.50"
+      name: "Softwaretechnik, Programmierung"
+      certified_until: 2028-02-21
+    - number: "68.62"
+      name: "Forensische Datensicherung, Datenrekonstruktion, Datenauswertung"
+      restriction: "Kryptowährungsforensik"
+      certified_until: 2028-02-21
+    - number: "68.65"
+      name: "Internetsoftware, WEB Programmierung, Netzwerkanwendung"
+      certified_until: 2028-02-21
 other_certifications: []
 address:
   street: "Metternichgasse 8"

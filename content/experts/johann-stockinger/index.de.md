@@ -10,11 +10,12 @@ role: "allgemein beeideter und gerichtlich zertifizierter Sachverständiger"
 court_certification:
   list_number: "W383379"
   url: "https://justizonline.gv.at/jop/web/exl/W383379"
-  fields:                        # TODO: verify exact field names and numbers against the court expert list
+  group: "68 Informationstechnik"
+  fields:                        # TODO: verify 68.60 wording, restrictions and certified_until against JustizOnline
     - number: "68.60"
-      name: "IT-Sicherheit"
+      name: "IT-Sicherheit (TODO: verify amtliche Bezeichnung)"
     - number: "68.62"
-      name: "IT-Forensik"
+      name: "Forensische Datensicherung, Datenrekonstruktion, Datenauswertung"
 other_certifications:
   - name: "GIAC Certified Forensic Analyst (GCFA)"
     issuer: "GIAC"

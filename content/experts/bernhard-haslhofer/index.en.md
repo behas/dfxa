@@ -10,13 +10,23 @@ role: "sworn and court-certified expert witness"
 court_certification:
   list_number: "W333553"
   url: "https://justizonline.gv.at/jop/web/exl/W333553"
-  fields:                        # TODO: verify exact field names and numbers against the court expert list
-    - number: ""
-      name: "IT forensics (TODO: verify name and number)"
-      official_name: ""
-    - number: ""
-      name: "Cryptoasset forensics (TODO: verify name and number)"
-      official_name: ""
+  group: "68 Information technology"
+  official_group: "68 Informationstechnik"
+  fields:                        # official German wording in official_*; English is a translation
+    - number: "68.50"
+      name: "Software engineering, programming"
+      official_name: "Softwaretechnik, Programmierung"
+      certified_until: 2028-02-21
+    - number: "68.62"
+      name: "Forensic data preservation, data reconstruction, data analysis"
+      official_name: "Forensische Datensicherung, Datenrekonstruktion, Datenauswertung"
+      restriction: "cryptocurrency forensics"
+      official_restriction: "Kryptowährungsforensik"
+      certified_until: 2028-02-21
+    - number: "68.65"
+      name: "Internet software, web programming, network applications"
+      official_name: "Internetsoftware, WEB Programmierung, Netzwerkanwendung"
+      certified_until: 2028-02-21
 other_certifications: []
 address:
   street: "Metternichgasse 8"

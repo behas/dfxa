@@ -91,3 +91,11 @@ home_finder_text = "Choose a service to see the experts who offer it."
 home_finder_link = "Go to the services"
 home_experts_heading = "The experts in the network"
 home_disclaimer_heading = "Note"
+
+# --- Court certification fields -------------------------------------------------
+# Placeholders: .Name, .Number, .Restriction, .Date
+court_field_inline = "“{{ .Name }}” ({{ .Number }})"
+court_field_inline_restricted = "“{{ .Name }}” ({{ .Number }}, restricted to {{ .Restriction }})"
+court_field_restriction = "restricted to {{ .Restriction }}"
+court_field_certified_until = "certified until {{ .Date }}"
+profile_cert_group = "Group"

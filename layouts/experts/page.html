@@ -41,11 +41,17 @@
     <p>{{ strings.FirstUpper $.Params.role }}</p>
     <dl class="facts">
       <dt>{{ T "profile_cert_fields" }}</dt>
-      <dd><ul>
+      <dd>
+        {{- with .group }}<p class="facts__group">{{ T "profile_cert_group" }} {{ . }}{{ with $cc.official_group }} (<span lang="de">{{ . }}</span>){{ end }}</p>{{ end }}
+        <ul>
         {{- range .fields }}
-        <li>{{ with .number }}{{ . }} {{ end }}{{ .name }}{{ with .official_name }} (<span lang="de">{{ . }}</span>){{ end }}</li>
+        <li>{{ with .number }}{{ . }} {{ end }}{{ .name }}{{ with .official_name }} (<span lang="de">{{ . }}</span>){{ end }}
+          {{- with .restriction }}, {{ T "court_field_restriction" (dict "Restriction" .) }}{{ end }}
+          {{- with .official_restriction }} (<span lang="de">{{ . }}</span>){{ end }}
+          {{- with .certified_until }} – {{ T "court_field_certified_until" (dict "Date" (time.Format ":date_long" .)) }}{{ end }}</li>
         {{- end }}
-      </ul></dd>
+        </ul>
+      </dd>
       <dt>{{ T "profile_cert_list_number" }}</dt>
       <dd>{{ .list_number }}</dd>
     </dl>
