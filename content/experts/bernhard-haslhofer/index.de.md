@@ -28,17 +28,18 @@ address:
   postal_code: "1030"
   locality: "Wien"
   country: "AT"
-languages: ["de", "en"]          # TODO: verify
+languages: ["de", "en"]
 email: ""                        # optional own address; contact@dfxa.at is always shown
 phone: ""                        # optional
 website: "https://bernhardhaslhofer.info/"
-same_as: []                      # optional: LinkedIn, ORCID, Google Scholar, GitHub
+same_as: []
+# TODO: add portrait.jpg to this bundle (Bernhard Haslhofer)
 services:
   - "cryptoasset-tracing"
   - "defi-smart-contract-analysis"
   - "dark-web-market-analysis"
   - "it-forensics-expert-opinion"
-audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]   # TODO: verify
+audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]
 domains: ["it-forensics", "cryptoassets"]
 ---
 
