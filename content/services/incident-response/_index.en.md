@@ -1,5 +1,6 @@
 ---
 title: "Incident response"
+slug: "incident-response"
 description: "Incident response to IT security incidents such as ransomware attacks: containment, analysis, crisis management and recovery."
 weight: 30
 domain: "incident-response"

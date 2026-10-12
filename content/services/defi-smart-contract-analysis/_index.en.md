@@ -1,5 +1,6 @@
 ---
 title: "DeFi and smart contract analysis"
+slug: "defi-smart-contract-analysis"
 description: "Analysis of DeFi protocols and smart contracts: reconstruction of transactions, exploits and fund flows via decentralised exchanges and bridges."
 weight: 80
 domain: "cryptoassets"

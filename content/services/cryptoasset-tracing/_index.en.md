@@ -1,5 +1,6 @@
 ---
 title: "Cryptoasset tracing"
+slug: "cryptoasset-tracing"
 description: "Cryptocurrency forensics and blockchain analysis: tracing of fund flows in Bitcoin, Ethereum and other cryptoassets, e.g. after fraud or theft."
 weight: 70
 domain: "cryptoassets"

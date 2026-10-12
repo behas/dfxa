@@ -27,6 +27,18 @@ disablePathToLower = false
   audience = "audiences"
   domain = "domains"
 
+# Public data file /services.json and /en/services.json (see docs/services-json.md).
+# It also feeds the client-side filters of the service finder.
+[outputFormats.services]
+  mediaType = "application/json"
+  baseName = "services"
+  isPlainText = true
+  notAlternative = true
+  permalinkable = false
+
+[outputs]
+  home = ["html", "services"]
+
 [params]
   contactEmail = "contact@dfxa.at"
   # Shown next to the short form in the header and in the legal notice.

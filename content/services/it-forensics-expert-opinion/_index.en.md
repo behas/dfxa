@@ -1,5 +1,6 @@
 ---
 title: "IT forensic expert opinion"
+slug: "it-forensics-expert-opinion"
 description: "IT forensic expert opinions by court-certified experts in Austria: findings and expert assessment of digital traces and evidence."
 weight: 10
 domain: "it-forensics"

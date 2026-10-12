@@ -1,5 +1,6 @@
 ---
 title: "Digital forensic investigation"
+slug: "digital-forensic-investigation"
 description: "Digital forensic investigation of computers, mobile devices, servers and cloud services with documentation suitable for court proceedings."
 weight: 20
 domain: "it-forensics"

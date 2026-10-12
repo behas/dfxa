@@ -1,5 +1,6 @@
 ---
 title: "Threat intelligence and threat hunting"
+slug: "threat-intelligence"
 description: "Threat intelligence and threat hunting: assessment of attackers and their methods, search for undetected compromises, detection rules."
 weight: 50
 domain: "it-security"

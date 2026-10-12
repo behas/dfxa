@@ -1,5 +1,6 @@
 ---
 title: "IT security assessment and hardening"
+slug: "it-security-assessment"
 description: "IT security assessment: review of architecture and configuration for vulnerabilities, state of the art and hardening measures."
 weight: 60
 domain: "it-security"
