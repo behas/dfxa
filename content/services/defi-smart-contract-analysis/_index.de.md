@@ -4,6 +4,7 @@ slug: "defi-smart-contract-analyse"
 description: "Analyse von DeFi-Protokollen und Smart Contracts: Rekonstruktion von Transaktionen, Exploits und Mittelflüssen über dezentrale Börsen und Bridges."
 weight: 80
 domain: "cryptoassets"
+keywords: ["DeFi", "Smart Contract", "Kryptowährung", "Exploit", "Ethereum", "Bridge", "Token"]
 typical_audiences: ["courts", "prosecution-police", "lawyers", "companies"]
 result: "Ein Gutachten oder Analysebericht mit einer Rekonstruktion der Transaktionen und einer Beschreibung der beteiligten Smart Contracts."
 ---

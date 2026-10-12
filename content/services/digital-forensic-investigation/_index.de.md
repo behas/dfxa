@@ -4,6 +4,7 @@ slug: "digitalforensische-untersuchung"
 description: "Digitalforensische Untersuchung von Computern, Mobilgeräten, Servern und Cloud-Diensten mit gerichtsverwertbarer Dokumentation."
 weight: 20
 domain: "it-forensics"
+keywords: ["IT-Forensik", "Computerforensik", "Mobilgeräteforensik", "Smartphone", "Datenwiederherstellung", "Beweissicherung", "Cloud"]
 typical_audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]
 result: "Ein Untersuchungsbericht mit dokumentierter Beweissicherung (Chain of Custody), Befunden und Zeitlinie. Er kann als Grundlage für ein Gutachten dienen."
 ---

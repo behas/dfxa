@@ -18,6 +18,7 @@
   "id" .Data.Term
   "title" .LinkTitle
   "description" .Description
+  "keywords" (.Params.keywords | default slice)
   "url" .Permalink
   "domain" .Params.domain
   "audiences" (.Params.typical_audiences | default slice)

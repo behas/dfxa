@@ -4,6 +4,7 @@ slug: "it-forensisches-gutachten"
 description: "IT-forensisches Gutachten durch gerichtlich zertifizierte Sachverständige in Österreich: Befund und Gutachten zu digitalen Spuren und Beweismitteln."
 weight: 10
 domain: "it-forensics"
+keywords: ["Gutachten", "Gerichtsgutachten", "Privatgutachten", "Sachverständigengutachten", "Computerforensik", "Beweismittel"]
 typical_audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]
 result: "Ein schriftliches Gutachten mit Befund und Gutachten im engeren Sinn. Es dokumentiert die untersuchten Daten, die Untersuchungsschritte, die verwendeten Werkzeuge sowie die Grenzen der getroffenen Aussagen."
 ---

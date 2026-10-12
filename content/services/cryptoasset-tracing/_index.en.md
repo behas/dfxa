@@ -4,6 +4,7 @@ slug: "cryptoasset-tracing"
 description: "Cryptocurrency forensics and blockchain analysis: tracing of fund flows in Bitcoin, Ethereum and other cryptoassets, e.g. after fraud or theft."
 weight: 70
 domain: "cryptoassets"
+keywords: ["cryptocurrency", "cryptocurrencies", "Bitcoin", "Ethereum", "blockchain analysis", "crypto fraud", "investment fraud", "wallet"]
 typical_audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]
 result: "An expert opinion or analysis report with reproducibly documented transaction paths, attributions and their limits."
 ---

@@ -4,6 +4,7 @@ slug: "it-forensics-expert-opinion"
 description: "IT forensic expert opinions by court-certified experts in Austria: findings and expert assessment of digital traces and evidence."
 weight: 10
 domain: "it-forensics"
+keywords: ["expert report", "court expert", "expert witness", "computer forensics", "digital evidence"]
 typical_audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]
 result: "A written expert opinion consisting of findings and the expert assessment. It documents the data examined, the steps taken, the tools used and the limits of the conclusions."
 ---

@@ -4,6 +4,7 @@ slug: "digital-forensic-investigation"
 description: "Digital forensic investigation of computers, mobile devices, servers and cloud services with documentation suitable for court proceedings."
 weight: 20
 domain: "it-forensics"
+keywords: ["IT forensics", "computer forensics", "mobile forensics", "smartphone", "data recovery", "evidence preservation", "cloud"]
 typical_audiences: ["courts", "prosecution-police", "lawyers", "companies", "authorities"]
 result: "An investigation report with documented evidence handling (chain of custody), findings and a timeline. It can serve as the basis for an expert opinion."
 ---

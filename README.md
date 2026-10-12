@@ -62,7 +62,8 @@ bundle; `CODEOWNERS` assigns it to them.
 
 1. Create `content/services/<key>/_index.de.md` and `_index.en.md` with
    `title`, `description` (≤ 155 characters), `weight`, `domain` (one key of
-   `content/domains/`), `typical_audiences` and `result`, and a body that
+   `content/domains/`), `typical_audiences`, `keywords` (search synonyms
+   for the service finder) and `result`, and a body that
    starts with a plain-language definition followed by typical questions.
    The German file also sets `slug` (German URL slug).
 2. Add `<slug>` to the `services` list in the front matter of every expert

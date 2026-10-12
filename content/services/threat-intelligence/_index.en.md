@@ -4,6 +4,7 @@ slug: "threat-intelligence"
 description: "Threat intelligence and threat hunting: assessment of attackers and their methods, search for undetected compromises, detection rules."
 weight: 50
 domain: "it-security"
+keywords: ["threat analysis", "threat actors", "APT", "detection engineering", "detection"]
 typical_audiences: ["companies", "authorities"]
 result: "A report with assessed threat information, the results of the search, and detection rules and recommendations."
 ---

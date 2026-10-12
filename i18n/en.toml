@@ -99,3 +99,17 @@ court_field_inline_restricted = "“{{ .Name }}” ({{ .Number }}, restricted to
 court_field_restriction = "restricted to {{ .Restriction }}"
 court_field_certified_until = "certified until {{ .Date }}"
 profile_cert_group = "Group"
+
+# --- Service finder filters ------------------------------------------------------
+finder_filter_label = "Filter services"
+finder_search_label = "Search services"
+finder_search_placeholder = "e.g. cryptocurrency, expert opinion, ransomware"
+finder_audience_legend = "For whom?"
+finder_domain_legend = "Domain"
+finder_reset = "Reset filters"
+finder_count_one = "1 service found."
+finder_count_other = "{{ .Count }} services found."
+finder_none = "No service matches the selected filters."
+finder_for = "For"
+home_search_label = "Search for a service"
+home_search_submit = "Search"

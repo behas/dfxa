@@ -4,6 +4,7 @@ slug: "threat-intelligence"
 description: "Threat Intelligence und Threat Hunting: Bewertung von Angreifern und ihren Methoden, Suche nach unentdeckten Kompromittierungen, Erkennungsregeln."
 weight: 50
 domain: "it-security"
+keywords: ["Bedrohungsanalyse", "Angreifer", "APT", "Detection Engineering", "Erkennung"]
 typical_audiences: ["companies", "authorities"]
 result: "Ein Bericht mit bewerteten Bedrohungsinformationen, den Ergebnissen der Suche sowie Erkennungsregeln und Empfehlungen."
 ---

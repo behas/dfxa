@@ -7,6 +7,11 @@
   <section class="finder-entry" aria-labelledby="h-finder">
     <h2 id="h-finder">{{ T "home_finder_heading" }}</h2>
     <p>{{ T "home_finder_text" }}</p>
+    <form class="home-search" role="search" action="{{ .RelPermalink }}" method="get">
+      <label for="home-q">{{ T "home_search_label" }}</label>
+      <input id="home-q" name="q" type="search" placeholder="{{ T "finder_search_placeholder" }}">
+      <button type="submit" class="button">{{ T "home_search_submit" }}</button>
+    </form>
     <ul class="chip-list">
       {{- range .Pages.ByTitle }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
     </ul>

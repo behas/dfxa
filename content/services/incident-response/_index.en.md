@@ -4,6 +4,7 @@ slug: "incident-response"
 description: "Incident response to IT security incidents such as ransomware attacks: containment, analysis, crisis management and recovery."
 weight: 30
 domain: "incident-response"
+keywords: ["ransomware", "cyberattack", "hacking", "security incident", "data breach", "crisis management"]
 typical_audiences: ["companies", "authorities"]
 result: "A documented incident handling record with a timeline, the measures taken and recommendations and, where required, traces preserved in a form suitable for court proceedings."
 ---

@@ -4,6 +4,7 @@ slug: "it-security-assessment"
 description: "IT security assessment: review of architecture and configuration for vulnerabilities, state of the art and hardening measures."
 weight: 60
 domain: "it-security"
+keywords: ["IT security", "vulnerabilities", "state of the art", "hardening", "security architecture", "audit"]
 typical_audiences: ["courts", "lawyers", "companies", "authorities"]
 result: "An assessment report with the vulnerabilities identified, a risk assessment and prioritised recommendations; in proceedings, in the form of an expert opinion."
 ---

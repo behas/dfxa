@@ -99,3 +99,17 @@ court_field_inline_restricted = "„{{ .Name }}“ ({{ .Number }}, nur für {{ .
 court_field_restriction = "nur für {{ .Restriction }}"
 court_field_certified_until = "zertifiziert bis {{ .Date }}"
 profile_cert_group = "Fachgruppe"
+
+# --- Service finder filters ------------------------------------------------------
+finder_filter_label = "Leistungen filtern"
+finder_search_label = "Suche in Leistungen"
+finder_search_placeholder = "z. B. Kryptowährung, Gutachten, Ransomware"
+finder_audience_legend = "Für wen?"
+finder_domain_legend = "Fachgebiet"
+finder_reset = "Filter zurücksetzen"
+finder_count_one = "1 Leistung gefunden."
+finder_count_other = "{{ .Count }} Leistungen gefunden."
+finder_none = "Keine Leistung entspricht den gewählten Filtern."
+finder_for = "Für"
+home_search_label = "Leistung suchen"
+home_search_submit = "Suchen"

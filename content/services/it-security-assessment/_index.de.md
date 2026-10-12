@@ -4,6 +4,7 @@ slug: "it-sicherheitsbewertung"
 description: "IT-Sicherheitsbewertung: Prüfung von Architektur und Konfiguration auf Schwachstellen, Stand der Technik und Maßnahmen zur Härtung."
 weight: 60
 domain: "it-security"
+keywords: ["IT-Sicherheit", "Schwachstellen", "Stand der Technik", "Härtung", "Sicherheitsarchitektur", "Audit"]
 typical_audiences: ["courts", "lawyers", "companies", "authorities"]
 result: "Ein Bewertungsbericht mit den festgestellten Schwachstellen, einer Risikoeinschätzung und priorisierten Empfehlungen; in Verfahren in Form eines Gutachtens."
 ---
