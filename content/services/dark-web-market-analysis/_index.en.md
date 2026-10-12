@@ -3,7 +3,7 @@ title: "Dark web and illicit online market analysis"
 slug: "dark-web-market-analysis"
 description: "Analysis of dark web markets and illicit online marketplaces: offerings, cryptoasset payment flows and links between actors."
 weight: 90
-domain: "cryptoassets"
+domain: "it-forensics"
 typical_audiences: ["courts", "prosecution-police", "lawyers", "authorities"]
 result: "An expert opinion or analysis report with a description of the marketplace, the relevant transactions and the attributions."
 ---
