@@ -37,7 +37,7 @@ Information über die Sachverständigen des Netzwerks Digital Forensics Austria 
 
 ## Verantwortung für Inhalte
 
-Jede bzw. jeder Sachverständige ist allein für die Inhalte des eigenen Profils verantwortlich. Für die übrigen Seiten sind die Medieninhaber gemeinsam verantwortlich. TODO: verify – Formulierung folgt (Bernhard Haslhofer).
+Jede bzw. jeder Sachverständige ist allein für die Inhalte des eigenen Profils verantwortlich. Für die übrigen Seiten sind die Medieninhaber gemeinsam verantwortlich.
 
 ## Haftungshinweis
 

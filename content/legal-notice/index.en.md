@@ -36,7 +36,7 @@ Information about the experts of the Digital Forensics Austria network and their
 
 ## Responsibility for content
 
-Each expert is solely responsible for the content of their own profile. The media owners are jointly responsible for the other pages. TODO: verify – wording to follow (Bernhard Haslhofer).
+Each expert is solely responsible for the content of their own profile. The media owners are jointly responsible for the other pages.
 
 ## Liability disclaimer
 
