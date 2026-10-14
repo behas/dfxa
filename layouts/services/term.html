@@ -35,6 +35,16 @@
     <p class="contact__note">{{ partial "obfuscate-address.html" (T "contact_note") }}</p>
   </section>
 
+  {{- with .Params.faq }}
+  <section class="faq" aria-labelledby="h-faq">
+    <h2 id="h-faq">{{ T "service_faq" }}</h2>
+    {{- range . }}
+    <h3>{{ .question }}</h3>
+    <p>{{ .answer }}</p>
+    {{- end }}
+  </section>
+  {{- end }}
+
   {{ partial "last-updated.html" . }}
 </article>
 {{ end }}

@@ -12,14 +12,7 @@
   </header>
 
   <div class="profile__intro">
-    {{- with $cc }}
-    {{- $fields := partial "court-fields.html" $ }}
-    <p>{{ T "profile_intro_cert" (dict "Name" $name "Role" $.Params.role "Fields" (partial "join-list.html" $fields) "ListNumber" .list_number) }}
-    {{- with $.Params.address }}{{ with .locality }}
-    {{- $langs := slice }}{{ range $.Params.languages }}{{ $langs = $langs | append (T (printf "lang_%s" .)) }}{{ end }}
-    {{ T "profile_intro_location" (dict "Name" $name "City" . "Languages" (partial "join-list.html" $langs)) }}
-    {{- end }}{{ end }}</p>
-    {{- end }}
+    <p>{{ delimit (partial "profile-intro.html" .) " " }}</p>
   </div>
 
   {{ .Content }}

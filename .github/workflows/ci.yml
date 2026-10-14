@@ -35,6 +35,9 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: hugo --gc --printPathWarnings
 
+      - name: SEO and structured data check
+        run: node scripts/check-seo.mjs
+
       - uses: actions/upload-artifact@v4
         with:
           name: public
