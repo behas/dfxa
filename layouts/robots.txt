@@ -8,8 +8,8 @@
 # "Disallow: /". Crawlers marked "search" or "user" retrieve pages to answer
 # questions and should stay allowed.
 #
-# TODO: confirm the policy for AI training crawlers with all experts before
-# deployment.
+# Policy: all crawlers allowed, including AI training crawlers
+# (decided 2026-10-14; see docs/seo.md).
 
 # All other crawlers, including search engines (Googlebot, Bingbot, …)
 User-agent: *

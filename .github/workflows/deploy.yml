@@ -46,6 +46,15 @@ jobs:
         # point to the github.io address.
         run: hugo --gc
 
+      # Never publish draft markers: every TODO must be resolved first
+      # (docs/open-items.md, scripts/list-todos.sh).
+      - name: No TODO markers in published pages
+        run: |
+          if grep -rl "TODO" public --include="*.html" --include="*.md" --include="*.txt" --include="*.json"; then
+            echo "::error::Published files contain TODO markers (listed above)."
+            exit 1
+          fi
+
       - uses: actions/upload-pages-artifact@v4
         with:
           path: ./public

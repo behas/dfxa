@@ -31,7 +31,10 @@ answers, change `Allow: /` to `Disallow: /` for the training crawlers
 and keep `OAI-SearchBot`, `ChatGPT-User`, `Claude-User`, `Claude-SearchBot`,
 `PerplexityBot` and `Perplexity-User` allowed.
 
-- [ ] TODO: decision of all experts on training crawlers, before deployment.
+Decision 2026-10-14 (Bernhard Haslhofer): **allow all crawlers**, including
+training crawlers.
+
+- [ ] TODO: verify – confirmation by Johann Stockinger.
 
 ## After launch (to be done by the experts, not automated)
 

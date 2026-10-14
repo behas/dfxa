@@ -99,4 +99,6 @@ Every push to `main` runs the checks in `.github/workflows/ci.yml` (language
 parity, build, SEO check, internal link check, accessibility and service finder tests) and then deploys with the official
 GitHub Pages actions (`.github/workflows/deploy.yml`). Pull requests run the
 same checks without deploying. External links are checked weekly by
-`.github/workflows/linkcheck-external.yml`.
+`.github/workflows/linkcheck-external.yml`. The deployment stops if any
+published page still contains a `TODO` marker; open items are listed in
+`docs/open-items.md`.
