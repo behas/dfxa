@@ -45,6 +45,7 @@ Either a classic branch protection rule or a repository ruleset
 - [ ] **Require status checks to pass** and require branches to be up to date:
   - `build` (job of workflow "CI")
   - `link check` (job of workflow "CI")
+  - `accessibility` (job of workflow "CI": axe on all pages, service finder test)
   The checks appear in the selection list only after the CI workflow has run
   at least once on a pull request.
 - [ ] **Block force pushes**

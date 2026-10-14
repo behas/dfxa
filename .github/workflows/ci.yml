@@ -64,3 +64,26 @@ jobs:
             --root-dir "${{ github.workspace }}/public"
             "public/**/*.html"
           fail: true
+
+  browser-checks:
+    name: accessibility
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: public
+          path: public
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: axe (WCAG 2.1 AA), all pages, light and dark
+        run: npm run check:a11y
+      - name: Service finder (with and without JavaScript)
+        run: npm run test:finder

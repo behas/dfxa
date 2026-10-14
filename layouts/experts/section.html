@@ -4,7 +4,7 @@
   {{ .Content }}
   <div class="card-grid">
     {{- range partial "sorted-experts.html" .Pages }}
-    {{ partial "expert-card.html" (dict "page" .) }}
+    {{ partial "expert-card.html" (dict "page" . "level" 2) }}
     {{- end }}
   </div>
 </div>

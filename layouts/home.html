@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="container">
   <h1>{{ .Title }}<span class="h1-suffix"> – {{ T "site_suffix" }}</span></h1>
-  {{ .Content }}
+  <div class="lead">{{ .Content }}</div>
 
   {{- with site.GetPage "/services" }}
   <section class="finder-entry" aria-labelledby="h-finder">

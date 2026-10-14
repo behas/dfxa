@@ -5,7 +5,6 @@ site_name = "Digital Forensics Austria"
 site_short = "DFXA"
 site_suffix = "Network of Independent Experts"
 site_title_suffix = "DFXA Digital Forensics Austria"
-home_link_label = "Startseite: Digital Forensics Austria – Network of Independent Experts"
 
 skip_to_content = "Zum Inhalt springen"
 nav_main_label = "Hauptnavigation"

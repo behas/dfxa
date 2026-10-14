@@ -9,7 +9,7 @@
   {{ .Content }}
   <p>{{ T "services_finder_intro" }}</p>
 
-  <form class="finder__form" role="search" aria-label="{{ T "finder_filter_label" }}" hidden
+  <form class="finder__form" role="search" aria-label="{{ T "finder_filter_label" }}"
         data-index="{{ $index.RelPermalink }}"
         data-count-one="{{ T "finder_count_one" }}"
         data-count-other="{{ T "finder_count_other" (dict "Count" "{n}") }}">

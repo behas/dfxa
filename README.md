@@ -40,7 +40,10 @@ Install Hugo extended 0.166.0 (see the
 ```sh
 hugo server                     # http://localhost:1313/ (DE) and /en/ (EN)
 hugo --gc                       # production build into public/
-node scripts/check-language-parity.mjs
+npm run check:parity            # every content file and i18n key in DE and EN
+npm ci && npx playwright install chromium   # once, for the browser checks
+npm run check:a11y              # axe (WCAG 2.1 AA) on all pages in public/
+npm run test:finder             # service finder with and without JavaScript
 ```
 
 `enableGitInfo` is on, so the repository needs at least one commit for the
@@ -92,7 +95,7 @@ This is enforced by branch protection on `main` and by `CODEOWNERS`; see
 ## Deployment
 
 Every push to `main` runs the checks in `.github/workflows/ci.yml` (language
-parity, build, internal link check) and then deploys with the official
+parity, build, internal link check, accessibility and service finder tests) and then deploys with the official
 GitHub Pages actions (`.github/workflows/deploy.yml`). Pull requests run the
 same checks without deploying. External links are checked weekly by
 `.github/workflows/linkcheck-external.yml`.

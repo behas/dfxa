@@ -8,6 +8,7 @@
 {{- else }}{{ $title = printf "%s – %s" .Title $suffix }}{{ end }}
 <title>{{ $title }}</title>
 {{- $desc := .Description | default .Summary | plainify | htmlUnescape | strings.TrimSpace }}
+{{- if eq .Kind "404" }}{{ $desc = T "notfound_text" }}{{ end }}
 {{- if not .Description }}{{ if not (eq .Kind "404") }}{{ warnf "[seo] missing description: %s (%s)" .RelPermalink .Language.Lang }}{{ end }}{{ end }}
 {{- with $desc }}
 <meta name="description" content="{{ . | truncate 155 }}">
@@ -19,5 +20,11 @@
 {{- partial "hreflang.html" . }}
 {{- end }}
 <meta name="color-scheme" content="light dark">
-{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+{{- /* Marks JavaScript support before first paint (see .finder__form in CSS). */}}
+<script>document.documentElement.classList.add("js")</script>
+{{- /* The stylesheet is small; inlining it avoids a render-blocking request. */}}
+{{- $css := resources.Get "css/main.css" | minify }}
+<style>{{ $css.Content | safeCSS }}</style>

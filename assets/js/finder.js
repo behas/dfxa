@@ -1,7 +1,8 @@
 // Service finder: client-side filtering of the server-rendered service list.
 //
 // Progressive enhancement: the page shows the complete list without
-// JavaScript. This script reveals the filter form, loads the JSON index
+// JavaScript; the filter form is only displayed when the <html> element has
+// the class "js" (set in the head). This script loads the JSON index
 // (/services.json or /en/services.json) and only hides or shows existing
 // elements. Filter state is kept in the query string (?q=…&audience=…&domain=…)
 // so that filtered views can be shared. Parameter values are the
@@ -64,14 +65,17 @@ function render(services, state) {
 }
 
 async function init() {
-  if (!form || !window.fetch || !window.URLSearchParams) return;
+  if (!form) return;
+  // Without the index the filters cannot work: remove the form, keep the list.
+  const giveUp = () => form.remove();
+  if (!window.fetch || !window.URLSearchParams) return giveUp();
   let data;
   try {
     const res = await fetch(form.dataset.index, { credentials: "same-origin" });
-    if (!res.ok) return;
+    if (!res.ok) return giveUp();
     data = await res.json();
   } catch {
-    return; // keep the full list without filters
+    return giveUp();
   }
   const experts = new Map(data.experts.map((e) => [e.id, e]));
   const services = new Map(
@@ -88,7 +92,6 @@ async function init() {
     ])
   );
 
-  form.hidden = false;
   const state = readState();
   applyStateToForm(state);
   render(services, state);

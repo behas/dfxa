@@ -4,7 +4,7 @@
 <article class="container profile">
   {{ partial "breadcrumbs.html" . }}
   <header class="profile__header">
-    {{- partial "portrait.html" (dict "page" . "width" 240) }}
+    {{- partial "portrait.html" (dict "page" . "width" 136 "eager" true) }}
     <div>
       <h1>{{ .Title }}</h1>
       {{- with .Params.role }}<p class="profile__role">{{ strings.FirstUpper . }}</p>{{ end }}
