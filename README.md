@@ -30,7 +30,7 @@ party (see "Content rules" below).
 | `assets/` | CSS and JS processed by Hugo Pipes |
 | `static/CNAME` | Custom domain for GitHub Pages (`dfxa.at`) |
 | `scripts/check-language-parity.mjs` | CI check: every content file and i18n key in both languages |
-| `docs/` | Operational documentation (repository settings, SEO, data file, admission of experts) |
+| `docs/` | Operational documentation (repository settings, DNS, SEO, data file, admission of experts) |
 
 ## Local development
 
