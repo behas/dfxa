@@ -51,7 +51,8 @@ markers in the pull request once the texts are approved.
       (`dfxaorg/dfxa`).
 - [x] Both experts are organisation owners; two-factor authentication
       required.
-- [x] Branch `main` created; set it as the default branch.
+- [x] Branch `main` created.
+- [ ] Set `main` as the default branch (Settings → General).
 - [ ] Branch protection and required checks (`build`, `link check`,
       `accessibility`) as in `docs/repository-setup.md`.
 - [ ] Connect Workers Builds and Email Routing (`docs/cloudflare.md`).
