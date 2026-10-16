@@ -7,14 +7,15 @@ built file still contains `TODO` (`scripts/build-cloudflare.sh`,
 
 ## Bernhard Haslhofer
 
-- [ ] Portrait: add `content/experts/bernhard-haslhofer/portrait.jpg`
-      (square or portrait format, at least 400 × 400 px) and remove the TODO
-      comment in both front matter files.
-- [ ] Background paragraph (DE and EN): career, research, publications.
-      Drafting from bernhardhaslhofer.info needs network access to that host
-      in the session environment; alternatively provide the text.
+- [ ] Background paragraph (DE and EN) and portrait: to be taken from
+      bernhardhaslhofer.info once the session environment allows network
+      access to that host, then confirmed by Bernhard Haslhofer.
 
 ## Johann Stockinger
+
+Court data and profile details are to be taken from JustizOnline (W383379)
+and stockinger.io once network access to these hosts is allowed, and
+confirmed by Johann Stockinger in the PR review.
 
 - [ ] Court certification (JustizOnline entry W383379): official name of
       field 68.60, any restrictions ("Nur für …") and the "Zertifiziert bis"
@@ -27,8 +28,7 @@ built file still contains `TODO` (`scripts/build-cloudflare.sh`,
       2026).
 - [ ] Own mailbox addresses of both experts as forwarding targets (Worker
       secret `FORWARD_TO`, verified destination addresses).
-- [ ] Confirm the robots.txt policy (all crawlers allowed, including AI
-      training crawlers).
+- [x] robots.txt policy confirmed (all crawlers allowed, 16 October 2026).
 - [ ] Cloudflare setup (`docs/cloudflare.md`) and DNS records (`docs/dns.md`).
 - [ ] Approve the shared pages (home, about, legal notice, privacy) – required
       for all shared pages by the cooperation agreement.
@@ -79,7 +79,7 @@ built file still contains `TODO` (`scripts/build-cloudflare.sh`,
 | JSON-LD without errors; network never Organization/LocalBusiness | checked by `scripts/check-seo.mjs`; external validation after launch |
 | Unique titles and descriptions; sitemap and robots.txt | done |
 | llms.txt, llms-full.txt, Markdown alternates with disclaimer | done |
-| robots.txt policy for AI training crawlers confirmed by the experts | open (Johann Stockinger) |
+| robots.txt policy for AI training crawlers confirmed by the experts | done |
 | Service finder with and without JavaScript; shareable filter URLs | done (`scripts/test-finder.cjs`) |
 | Lighthouse mobile ≥ 95; no axe errors | done locally (100 / 0 violations) |
 | Link check passes in CI | done locally; CI runs on the first pull request |
