@@ -1,10 +1,11 @@
 #!/bin/sh
 # Build command for Cloudflare Workers Builds (see docs/cloudflare.md).
 #
-# Production (branch main): language parity, Hugo build, SEO check and the
-# TODO guard must all pass, otherwise the build fails and nothing is deployed.
-# Preview builds (other branches): same checks except the TODO guard; the
-# preview is marked noindex so that search engines do not index it.
+# Language parity, Hugo build, SEO check and the TODO guard must all pass,
+# otherwise the build fails and nothing is deployed. The TODO guard runs on
+# every branch, so draft text cannot go live even if the Cloudflare project's
+# production branch is set to a branch other than main. Builds of branches
+# other than main are marked noindex so that previews are not indexed.
 # Requires the build variable HUGO_VERSION=0.166.0 (Hugo extended).
 set -eu
 cd "$(dirname "$0")/.."
@@ -17,10 +18,10 @@ node scripts/check-language-parity.mjs
 hugo --gc
 node scripts/check-seo.mjs
 
+sh scripts/check-no-todo.sh
+
 branch="${WORKERS_CI_BRANCH:-}"
-if [ "$branch" = "main" ]; then
-  sh scripts/check-no-todo.sh
-else
-  echo "Preview build (branch '${branch:-local}'): TODO guard skipped, adding X-Robots-Tag: noindex."
+if [ "$branch" != "main" ]; then
+  echo "Build of branch '${branch:-local}' (not main): adding X-Robots-Tag: noindex."
   printf '\n/*\n  X-Robots-Tag: noindex\n' >> public/_headers
 fi

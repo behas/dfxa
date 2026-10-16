@@ -21,12 +21,14 @@ current documentation.
    other expert's approval (`docs/repository-setup.md`).
 2. Workers Builds builds every pushed branch. For branches other than `main`
    it uploads a **preview** (a preview URL on `workers.dev`, marked
-   `X-Robots-Tag: noindex`) without changing the live site.
+   `X-Robots-Tag: noindex`) without changing the live site. Like production
+   builds, previews fail while published files contain `TODO`.
 3. After merging, Workers Builds builds `main` with
    `sh scripts/build-cloudflare.sh` and deploys it to `dfxa.at`. The build
    fails, and nothing is deployed, if the language parity check, the Hugo
    build, the SEO check or the TODO guard (no `TODO` in published files)
-   fails.
+   fails. The TODO guard runs on every branch, so a wrongly configured
+   production branch cannot publish draft text either.
 
 ## 2. Create the Worker and connect the repository
 
@@ -40,7 +42,7 @@ Documentation: <https://developers.cloudflare.com/workers/ci-cd/builds/>
   | Setting | Value |
   | --- | --- |
   | Worker name | `dfxa` (must match `name` in `wrangler.jsonc`) |
-  | Production branch | `main` |
+  | Production branch | `main` (check this: Cloudflare proposes the repository's default branch) |
   | Build command | `sh scripts/build-cloudflare.sh` |
   | Deploy command | `npx wrangler deploy` |
   | Preview command | default (`npx wrangler preview`) |
