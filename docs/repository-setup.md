@@ -9,9 +9,9 @@ Organisation: `dfxaorg`. Repository: `dfxaorg/dfxa` (transferred from
 ## 1. Organisation and repository
 
 - [x] Create the GitHub organisation `dfxaorg` (not a personal account).
-- [ ] Make both experts organisation **owners**
+- [x] Make both experts organisation **owners**
       (Organisation → Settings → Member privileges / People → Role: Owner).
-- [ ] Require two-factor authentication for all members
+- [x] Require two-factor authentication for all members
       (Organisation → Settings → Authentication security).
 - [x] Transfer the repository from `behas/dfxa` to the organisation
       (done 16 October 2026).

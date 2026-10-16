@@ -35,6 +35,9 @@ confirmed by Johann Stockinger in the PR review.
 
 ## Legal review
 
+Reviewed by both experts themselves; they remove the `TODO: legal review`
+markers in the pull request once the texts are approved.
+
 - [ ] Legal notice (whole text), including whether VAT identification
       numbers must be stated.
 - [ ] Privacy policy (whole text), including Cloudflare, Inc.'s address,
@@ -46,8 +49,8 @@ confirmed by Johann Stockinger in the PR review.
 
 - [x] Create the GitHub organisation `dfxaorg` and transfer the repository
       (`dfxaorg/dfxa`).
-- [ ] Make both experts organisation owners; require two-factor
-      authentication.
+- [x] Both experts are organisation owners; two-factor authentication
+      required.
 - [x] Branch `main` created; set it as the default branch.
 - [ ] Branch protection and required checks (`build`, `link check`,
       `accessibility`) as in `docs/repository-setup.md`.
