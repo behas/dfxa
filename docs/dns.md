@@ -1,8 +1,8 @@
 # DNS checklist for dfxa.at
 
 To be carried out by the domain holder, **Johann Stockinger**, at the DNS
-provider of `dfxa.at`. `<org>` is the name of the GitHub organisation that
-owns the repository (TODO: replace once decided).
+provider of `dfxa.at`. `dfxaorg` is the name of the GitHub organisation that
+owns the repository.
 
 GitHub Pages values verified against the GitHub documentation source
 (`github/docs`, `content/pages/configuring-a-custom-domain-for-your-github-pages-site/`)
@@ -12,7 +12,7 @@ before making the changes.
 
 ## 1. Before changing DNS
 
-- [ ] The repository has been transferred to `<org>` and GitHub Pages is
+- [ ] The repository has been transferred to `dfxaorg` and GitHub Pages is
       enabled (Source: GitHub Actions); the first deployment has run
       (see `docs/repository-setup.md`).
 - [ ] Note the existing records of `dfxa.at` (screenshot or export), so that
@@ -20,16 +20,16 @@ before making the changes.
 
 ## 2. Domain verification (prevents domain takeover)
 
-In GitHub: Organisation `<org>` → Settings → Pages → Add a domain →
+In GitHub: Organisation `dfxaorg` → Settings → Pages → Add a domain →
 `dfxa.at`. GitHub shows a TXT record:
 
 | Host | Type | Value |
 | --- | --- | --- |
-| `_github-pages-challenge-<org>` | TXT | value shown in the GitHub organisation settings |
+| `_github-pages-challenge-dfxaorg` | TXT | value shown in the GitHub organisation settings |
 
 - [ ] TXT record created.
 - [ ] Verified in GitHub (may take up to 24 hours). Check:
-      `dig _github-pages-challenge-<org>.dfxa.at +nostats +nocomments +nocmd TXT`
+      `dig _github-pages-challenge-dfxaorg.dfxa.at +nostats +nocomments +nocmd TXT`
 - [ ] Keep the TXT record permanently.
 
 ## 3. Website records
@@ -44,7 +44,7 @@ In GitHub: Organisation `<org>` → Settings → Pages → Add a domain →
 | `@` | AAAA | `2606:50c0:8001::153` |
 | `@` | AAAA | `2606:50c0:8002::153` |
 | `@` | AAAA | `2606:50c0:8003::153` |
-| `www` | CNAME | `<org>.github.io` |
+| `www` | CNAME | `dfxaorg.github.io` |
 
 - [ ] Remove all other existing `A`, `AAAA`, `ALIAS`/`ANAME` records for `@`
       and any existing record for `www` (e.g. a parking page of the registrar).

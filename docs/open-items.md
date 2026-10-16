@@ -41,9 +41,10 @@ built HTML page still contains `TODO` (see `.github/workflows/deploy.yml`).
 
 ## Repository and deployment
 
-- [ ] Create the GitHub organisation, make both experts owners, transfer
-      `behas/dfxa` and rename it to `dfxa.at`; replace `<org>` in
-      `docs/repository-setup.md` and `docs/dns.md`.
+- [x] Create the GitHub organisation `dfxaorg` and transfer the repository
+      (`dfxaorg/dfxa`).
+- [ ] Make both experts organisation owners; require two-factor
+      authentication.
 - [ ] Enable GitHub Pages (Source: GitHub Actions), branch protection and
       required checks (`build`, `link check`, `accessibility`) as in
       `docs/repository-setup.md`.

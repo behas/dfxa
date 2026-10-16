@@ -3,22 +3,19 @@
 These settings are made in the GitHub web interface by an organisation owner.
 They are not stored in the repository.
 
-The organisation name is referred to as `<org>` below.
-TODO: replace `<org>` once the organisation name has been decided.
+Organisation: `dfxaorg`. Repository: `dfxaorg/dfxa` (transferred from
+`behas/dfxa` on 16 October 2026; GitHub redirects the old URLs).
 
 ## 1. Organisation and repository
 
-- [ ] Create the GitHub organisation `<org>` (not a personal account).
+- [x] Create the GitHub organisation `dfxaorg` (not a personal account).
 - [ ] Make both experts organisation **owners**
       (Organisation → Settings → Member privileges / People → Role: Owner).
 - [ ] Require two-factor authentication for all members
       (Organisation → Settings → Authentication security).
-- [ ] Transfer the repository from its current location `behas/dfxa` to the
-      organisation (Repository → Settings → General → Danger Zone → Transfer
-      ownership) and rename it to `dfxa.at`. GitHub redirects the old URLs.
-      Do this before GitHub Pages and the custom domain are configured
-      (milestone 6), so that the domain is verified for the organisation and
-      not for a personal account.
+- [x] Transfer the repository from `behas/dfxa` to the organisation
+      (done 16 October 2026, before GitHub Pages and the custom domain were
+      configured, so that the domain is verified for the organisation).
 
 ## 2. GitHub Pages
 
