@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Runs axe-core (WCAG 2.0/2.1 A and AA plus best practices) on every HTML page
-// in public/, in light and dark colour scheme at mobile width.
+// in public/, in light and dark colour scheme at mobile width, and checks that
+// no page violates the Content-Security-Policy from public/_headers.
 // Exit code 1 if any violation is found.
 // Usage: hugo && node scripts/check-a11y.cjs   (npm ci installs the dependencies)
 const fs = require("node:fs");
@@ -25,8 +26,25 @@ function htmlPages(dir) {
   const pages = htmlPages(root).filter((p) => !fs.readFileSync(path.join(root, p.endsWith("/") ? p + "index.html" : p), "utf8").includes('http-equiv="refresh"'));
   const browser = await chromium.launch();
   let violations = 0;
+
+  // 1. Every page under the site's Content-Security-Policy (from _headers):
+  //    no violations may be reported.
+  const strict = await browser.newContext();
+  for (const p of pages) {
+    const page = await strict.newPage();
+    page.on("console", (m) => {
+      if (/Content Security Policy|Refused to/i.test(m.text())) { violations++; console.error(`${p}: CSP: ${m.text()}`); }
+    });
+    await page.goto(url + p);
+    await page.waitForTimeout(50);
+    await page.close();
+  }
+  await strict.close();
+
+  // 2. axe in light and dark mode. axe is injected as a script, so CSP is
+  //    bypassed in this context only.
   for (const colorScheme of ["light", "dark"]) {
-    const context = await browser.newContext({ colorScheme, viewport: { width: 390, height: 844 } });
+    const context = await browser.newContext({ colorScheme, viewport: { width: 390, height: 844 }, bypassCSP: true });
     for (const p of pages) {
       const page = await context.newPage();
       await page.goto(url + p);
@@ -44,6 +62,6 @@ function htmlPages(dir) {
   }
   await browser.close();
   server.close();
-  console.log(`axe: ${pages.length} pages × 2 colour schemes, ${violations} violation(s).`);
+  console.log(`axe and CSP: ${pages.length} pages × 2 colour schemes, ${violations} violation(s).`);
   process.exit(violations ? 1 : 0);
 })();

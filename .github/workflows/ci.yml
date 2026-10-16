@@ -1,9 +1,14 @@
-# Pull requests: build, language parity check and link check. No deployment.
+# Checks for pull requests and for main: language parity, build, SEO check,
+# internal link check, accessibility and service finder tests.
+# Deployment is done by Cloudflare Workers Builds (docs/cloudflare.md), which
+# runs scripts/build-cloudflare.sh; these checks are required for merging
+# into main by branch protection.
 name: CI
 
 on:
   pull_request:
-  workflow_call:
+  push:
+    branches: [main]
 
 permissions:
   contents: read

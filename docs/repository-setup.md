@@ -14,21 +14,17 @@ Organisation: `dfxaorg`. Repository: `dfxaorg/dfxa` (transferred from
 - [ ] Require two-factor authentication for all members
       (Organisation → Settings → Authentication security).
 - [x] Transfer the repository from `behas/dfxa` to the organisation
-      (done 16 October 2026, before GitHub Pages and the custom domain were
-      configured, so that the domain is verified for the organisation).
+      (done 16 October 2026).
 
-## 2. GitHub Pages
+## 2. Default branch and hosting
 
-- [ ] Repository → Settings → Pages → Build and deployment → Source:
-      **GitHub Actions**.
-- [ ] After the DNS records in `docs/dns.md` are in place: Settings → Pages →
-      Custom domain: `dfxa.at`, then tick **Enforce HTTPS** once the
-      certificate has been issued.
-- [ ] Verify the domain for the organisation to prevent domain takeover:
-      Organisation → Settings → Pages → Add a domain → `dfxa.at`
-      (requires the TXT record from `docs/dns.md`).
-- [ ] Settings → Environments → `github-pages` → Deployment branches and tags:
-      restrict to `main`.
+- [x] Branch `main` created (from the milestone-1 scaffold commit).
+- [ ] Settings → General → Default branch: **`main`** (scheduled workflows
+      such as the weekly external link check run from the default branch).
+- [ ] Settings → Pages: leave GitHub Pages **disabled**; the site is hosted
+      on Cloudflare (`docs/cloudflare.md`).
+- [ ] Cloudflare's GitHub app is installed for `dfxaorg` with access to
+      `dfxa` only (done when connecting Workers Builds).
 
 ## 3. Branch protection for `main`
 

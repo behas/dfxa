@@ -14,11 +14,11 @@ Diese Website setzt keine Cookies, verwendet keine Analyse- oder Tracking-Dienst
 
 ## Hosting
 
-Die Website wird über GitHub Pages bereitgestellt. Anbieter ist GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. TODO: legal review – Anschrift und zuständige Vertragspartei prüfen.
+Die Website wird über Cloudflare Workers bereitgestellt. Anbieter ist Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare betreibt dafür ein weltweites Netz von Rechenzentren, auch innerhalb der EU. TODO: legal review – Anschrift, zuständige Vertragspartei und Auftragsverarbeitungsvertrag (Data Processing Addendum) von Cloudflare prüfen.
 
-Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten in Server-Protokollen, insbesondere die IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite und Angaben zum verwendeten Browser. Die Verarbeitung dient der Bereitstellung und Sicherheit der Website. Rechtsgrundlage ist das berechtigte Interesse an einem sicheren und funktionsfähigen Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO).
+Beim Aufruf der Website verarbeitet Cloudflare technisch notwendige Daten, insbesondere die IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite und Angaben zum verwendeten Browser. Die Verarbeitung dient der Bereitstellung und Sicherheit der Website, etwa zur Abwehr von Angriffen. Rechtsgrundlage ist das berechtigte Interesse an einem sicheren und funktionsfähigen Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare-Funktionen, die Cookies setzen oder Analysedaten erheben, sind für diese Website deaktiviert.
 
-Dabei werden Daten in die USA übermittelt. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der Europäischen Kommission zum EU-US Data Privacy Framework, soweit GitHub, Inc. danach zertifiziert ist. TODO: legal review – Zertifizierung von GitHub, Inc. in der Data-Privacy-Framework-Liste prüfen; andernfalls Standardvertragsklauseln angeben.
+Dabei können Daten in die USA übermittelt werden. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der Europäischen Kommission zum EU-US Data Privacy Framework, soweit Cloudflare, Inc. danach zertifiziert ist. TODO: legal review – Zertifizierung von Cloudflare, Inc. in der Data-Privacy-Framework-Liste prüfen; andernfalls Standardvertragsklauseln angeben.
 
 ## E-Mail-Anfragen an die Kontaktadresse
 
@@ -43,7 +43,7 @@ Verarbeitet werden die E-Mail-Adresse, der Name und die Angaben, die in der Anfr
 
 ### Weiterleitung
 
-Die Weiterleitung von {{< contact-email >}} erfolgt über TODO: verify – Anbieter der E-Mail-Weiterleitung für dfxa.at (Name, Anschrift) bei Johann Stockinger erfragen. TODO: verify – angeben, ob dabei Daten in Länder außerhalb der EU übermittelt werden und auf welcher Grundlage.
+Die Weiterleitung von {{< contact-email >}} an die Postfächer der Sachverständigen erfolgt über Cloudflare Email Routing (Cloudflare, Inc., Anschrift siehe oben). Cloudflare verarbeitet dabei die Nachricht einschließlich Absenderadresse und Inhalt, um sie zuzustellen; dabei können Daten in die USA übermittelt werden (Grundlage wie beim Hosting). TODO: legal review – Speicherung und Löschung der Nachrichten bei Cloudflare Email Routing laut Auftragsverarbeitungsvertrag prüfen.
 
 ## E-Mails an die eigene Adresse einer bzw. eines Sachverständigen
 

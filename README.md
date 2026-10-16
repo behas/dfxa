@@ -17,7 +17,9 @@ party (see "Content rules" below).
 - No external fonts, CDNs, scripts, cookies or analytics. CSS and JS are
   bundled with Hugo Pipes.
 - Bilingual: German (default, `/`) and English (`/en/`).
-- Hosted on GitHub Pages, deployed by GitHub Actions on every push to `main`.
+- Hosted on Cloudflare (Workers static assets), deployed by Cloudflare
+  Workers Builds on every push to `main`; mail to contact@dfxa.at via
+  Cloudflare Email Routing (`docs/cloudflare.md`).
 
 ## Repository layout
 
@@ -28,7 +30,9 @@ party (see "Content rules" below).
 | `i18n/de.toml`, `i18n/en.toml` | All UI strings (never hard-code text in templates) |
 | `layouts/` | Templates (`baseof.html`, `home.html`, …) and partials in `layouts/_partials/` |
 | `assets/` | CSS and JS processed by Hugo Pipes |
-| `static/CNAME` | Custom domain for GitHub Pages (`dfxa.at`) |
+| `wrangler.jsonc` | Cloudflare Worker configuration (static assets, custom domain `dfxa.at`) |
+| `static/_headers`, `static/_redirects` | Security headers (CSP, HSTS, …) and redirects on Cloudflare |
+| `workers/mail/` | Email Worker forwarding contact@dfxa.at to both experts |
 | `scripts/check-language-parity.mjs` | CI check: every content file and i18n key in both languages |
 | `docs/` | Operational documentation (repository settings, DNS, SEO, data file, admission of experts) |
 
@@ -43,7 +47,8 @@ hugo --gc                       # production build into public/
 npm run check:parity            # every content file and i18n key in DE and EN
 npm run check:seo               # titles, descriptions, hreflang, JSON-LD, llms.txt (after hugo)
 npm ci && npx playwright install chromium   # once, for the browser checks
-npm run check:a11y              # axe (WCAG 2.1 AA) on all pages in public/
+npm run check:a11y              # axe (WCAG 2.1 AA) and CSP on all pages in public/
+npm run build:cloudflare        # the Cloudflare build (production: WORKERS_CI_BRANCH=main)
 npm run test:finder             # service finder with and without JavaScript
 ```
 
@@ -95,10 +100,13 @@ This is enforced by branch protection on `main` and by `CODEOWNERS`; see
 
 ## Deployment
 
-Every push to `main` runs the checks in `.github/workflows/ci.yml` (language
-parity, build, SEO check, internal link check, accessibility and service finder tests) and then deploys with the official
-GitHub Pages actions (`.github/workflows/deploy.yml`). Pull requests run the
-same checks without deploying. External links are checked weekly by
-`.github/workflows/linkcheck-external.yml`. The deployment stops if any
-published page still contains a `TODO` marker; open items are listed in
-`docs/open-items.md`.
+Pull requests and pushes to `main` run the checks in
+`.github/workflows/ci.yml` (language parity, build, SEO check, internal link
+check, accessibility, Content-Security-Policy and service finder tests);
+branch protection requires them before merging. Cloudflare Workers Builds
+then builds `main` with `sh scripts/build-cloudflare.sh` and deploys it to
+`dfxa.at`; the build stops if the language, SEO or TODO checks fail, so a
+page with a `TODO` marker is never published (open items:
+`docs/open-items.md`). Other branches get a non-indexed preview. External
+links are checked weekly by `.github/workflows/linkcheck-external.yml`.
+Setup: `docs/cloudflare.md`, `docs/dns.md`, `docs/repository-setup.md`.

@@ -2,7 +2,8 @@
 
 Status: 14 October 2026. `scripts/list-todos.sh` lists all `TODO` markers
 in the repository. The deployment workflow refuses to publish while any
-built HTML page still contains `TODO` (see `.github/workflows/deploy.yml`).
+built file still contains `TODO` (`scripts/build-cloudflare.sh`,
+`scripts/check-no-todo.sh`).
 
 ## Bernhard Haslhofer
 
@@ -22,12 +23,13 @@ built HTML page still contains `TODO` (see `.github/workflows/deploy.yml`).
 - [ ] Working languages and audiences (currently: German, English; all five
       audiences).
 - [ ] Background paragraph (DE and EN) and portrait.
-- [ ] Mail forwarding provider for contact@dfxa.at (name, address, transfer
-      outside the EU) – needed for the privacy policy and `docs/dns.md`.
-- [ ] Own mailbox addresses of both experts as forwarding targets.
+- [x] Mail forwarding provider: Cloudflare Email Routing (decided 16 October
+      2026).
+- [ ] Own mailbox addresses of both experts as forwarding targets (Worker
+      secret `FORWARD_TO`, verified destination addresses).
 - [ ] Confirm the robots.txt policy (all crawlers allowed, including AI
       training crawlers).
-- [ ] DNS changes according to `docs/dns.md` (after the repository transfer).
+- [ ] Cloudflare setup (`docs/cloudflare.md`) and DNS records (`docs/dns.md`).
 - [ ] Approve the shared pages (home, about, legal notice, privacy) – required
       for all shared pages by the cooperation agreement.
 
@@ -35,9 +37,10 @@ built HTML page still contains `TODO` (see `.github/workflows/deploy.yml`).
 
 - [ ] Legal notice (whole text), including whether VAT identification
       numbers must be stated.
-- [ ] Privacy policy (whole text), including GitHub, Inc.'s address and
-      contracting entity and its certification under the EU-US Data Privacy
-      Framework, and the address of the Datenschutzbehörde.
+- [ ] Privacy policy (whole text), including Cloudflare, Inc.'s address,
+      contracting entity, Data Processing Addendum (also for Email Routing)
+      and its certification under the EU-US Data Privacy Framework, and the
+      address of the Datenschutzbehörde.
 
 ## Repository and deployment
 
@@ -45,13 +48,15 @@ built HTML page still contains `TODO` (see `.github/workflows/deploy.yml`).
       (`dfxaorg/dfxa`).
 - [ ] Make both experts organisation owners; require two-factor
       authentication.
-- [ ] Enable GitHub Pages (Source: GitHub Actions), branch protection and
-      required checks (`build`, `link check`, `accessibility`) as in
-      `docs/repository-setup.md`.
+- [x] Branch `main` created; set it as the default branch.
+- [ ] Branch protection and required checks (`build`, `link check`,
+      `accessibility`) as in `docs/repository-setup.md`.
+- [ ] Connect Workers Builds and Email Routing (`docs/cloudflare.md`).
 - [ ] Merge this branch into `main` via a pull request reviewed by the other
-      expert; the deployment runs on the push to `main`.
-- [ ] Custom domain `dfxa.at`, Enforce HTTPS; redirects of `www.dfxa.at`,
-      `dfxa.eu`, `dfxa.org` (see `docs/dns.md`, section 6).
+      expert; Workers Builds deploys on the push to `main`.
+- [ ] Custom domain `dfxa.at`, Always Use HTTPS; redirect rules for
+      `www.dfxa.at`, `dfxa.eu`, `dfxa.org`; zone settings without analytics,
+      cookies or injected scripts (`docs/cloudflare.md`, `docs/dns.md`).
 
 ## After launch
 
@@ -78,6 +83,6 @@ built HTML page still contains `TODO` (see `.github/workflows/deploy.yml`).
 | Service finder with and without JavaScript; shareable filter URLs | done (`scripts/test-finder.cjs`) |
 | Lighthouse mobile ≥ 95; no axe errors | done locally (100 / 0 violations) |
 | Link check passes in CI | done locally; CI runs on the first pull request |
-| https://dfxa.at with valid certificate; www, dfxa.eu, dfxa.org redirect | open (milestone 6) |
+| https://dfxa.at with valid certificate; www, dfxa.eu, dfxa.org redirect | open (Cloudflare setup) |
 | Branch protection and CODEOWNERS active | CODEOWNERS done; branch protection open |
 | All `TODO: verify` items confirmed | open (this list) |

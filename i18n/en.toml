@@ -28,8 +28,8 @@ last_updated = "Last updated"
 notfound_title = "Page not found"
 notfound_text = "The requested page does not exist or has been moved."
 notfound_home = "Go to the home page"
-# The 404 page is served for both languages by GitHub Pages (/404.html),
-# so it also carries the text of the other language.
+# The 404 page also carries the text of the other language, so that a
+# visitor who mistyped a URL finds both home pages.
 notfound_alt_lang = "de"
 notfound_alt_title = "Seite nicht gefunden"
 notfound_alt_text = "Die angeforderte Seite existiert nicht oder wurde verschoben."

@@ -21,6 +21,7 @@ const visible = (page) => page.$$eval('[data-service]', els => els.filter(e => !
 
   const page = await b.newPage();
   const errors = []; page.on('pageerror', e => errors.push(e.message));
+  page.on('console', m => { if (/Content Security Policy|Refused to/i.test(m.text())) errors.push('CSP: ' + m.text()); });
   const ext = []; page.on('request', r => { if (!r.url().startsWith(base)) ext.push(r.url()); });
 
   await page.goto(base + '/leistungen/');
@@ -76,7 +77,7 @@ const visible = (page) => page.$$eval('[data-service]', els => els.filter(e => !
   v = await visible(page);
   check('home search -> finder filtered', v.includes('malware-analysis') && v.length < 9, v);
 
-  check('no JS errors', errors.length === 0, errors);
+  check('no JS errors or CSP violations', errors.length === 0, errors);
   check('no external requests', ext.length === 0, ext);
   await b.close();
   srv.server.close();

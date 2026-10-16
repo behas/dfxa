@@ -13,11 +13,11 @@ This website does not set cookies, does not use analytics or tracking services, 
 
 ## Hosting
 
-The website is served via GitHub Pages. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. TODO: legal review – check address and contracting entity.
+The website is served via Cloudflare Workers. The provider is Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare operates a worldwide network of data centres for this purpose, including within the EU. TODO: legal review – check Cloudflare's address, contracting entity and Data Processing Addendum.
 
-When the website is accessed, GitHub processes technically necessary data in server logs, in particular the IP address, date and time of access, the page requested and information about the browser used. The processing serves to provide the website and keep it secure. The legal basis is the legitimate interest in the secure and reliable operation of the website (Art. 6(1)(f) GDPR).
+When the website is accessed, Cloudflare processes technically necessary data, in particular the IP address, date and time of access, the page requested and information about the browser used. The processing serves to provide the website and keep it secure, for example to defend against attacks. The legal basis is the legitimate interest in the secure and reliable operation of the website (Art. 6(1)(f) GDPR). Cloudflare features that set cookies or collect analytics data are disabled for this website.
 
-This involves a transfer of data to the USA. The transfer is based on the European Commission's adequacy decision for the EU-US Data Privacy Framework, to the extent that GitHub, Inc. is certified under it. TODO: legal review – check GitHub, Inc.'s certification in the Data Privacy Framework list; otherwise state standard contractual clauses.
+This may involve a transfer of data to the USA. The transfer is based on the European Commission's adequacy decision for the EU-US Data Privacy Framework, to the extent that Cloudflare, Inc. is certified under it. TODO: legal review – check Cloudflare, Inc.'s certification in the Data Privacy Framework list; otherwise state standard contractual clauses.
 
 ## Enquiries by email to the contact address
 
@@ -42,7 +42,7 @@ The email address, the name and the information provided in the enquiry are proc
 
 ### Forwarding
 
-Mail to {{< contact-email >}} is forwarded via TODO: verify – ask Johann Stockinger for the provider of the mail forwarding for dfxa.at (name, address). TODO: verify – state whether data are transferred to countries outside the EU in the process and on which basis.
+Mail to {{< contact-email >}} is forwarded to the experts' mailboxes via Cloudflare Email Routing (Cloudflare, Inc., address see above). Cloudflare processes the message, including the sender address and content, in order to deliver it; this may involve a transfer of data to the USA (on the same basis as for hosting). TODO: legal review – check storage and deletion of messages by Cloudflare Email Routing according to the Data Processing Addendum.
 
 ## Emails to an expert's own address
 
